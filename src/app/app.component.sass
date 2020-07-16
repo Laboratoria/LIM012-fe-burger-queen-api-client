@@ -5,15 +5,13 @@
   margin: 5px
 
 .logo
-  @include container(15rem, 5rem)
+  @include container(7rem, 2rem)
 
-.fondo
-  @include container(20rem, 10rem)
+$layout-breakpoint-tablet: 321px
 
-$layout-breakpoint-small: 359px
+@media (min-width: $layout-breakpoint-tablet)
+  .logo
+    @include container(15rem, 5rem)
 
-@media (min-width: $layout-breakpoint-small)
-  .hide-extra-small
-    display: none
     
 
