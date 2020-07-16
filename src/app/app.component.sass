@@ -1,0 +1,19 @@
+@mixin container($ancho, $alto)
+  width: $ancho
+  height: $alto
+  text-align: center
+  margin: 5px
+
+.logo
+  @include container(15rem, 5rem)
+
+.fondo
+  @include container(20rem, 10rem)
+
+$layout-breakpoint-small: 359px
+
+@media (min-width: $layout-breakpoint-small)
+  .hide-extra-small
+    display: none
+    
+
