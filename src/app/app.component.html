@@ -1,11 +1,14 @@
 <img alt="Angular Logo" class="logo" src="../assets/logo.png"/>
 <body>
-  <section>
+
+  <app-login></app-login>
+  
+<section>
+  <article>
     {{title}}!
     <h2>Rutas de los componentes </h2>
-  </section>
-  <!--<app-login></app-login>-->
-  
+  </article>
+    
   <ul>
     <li routerLink="home">home</li>
     <li routerLink="login">login</li>
@@ -14,6 +17,8 @@
   </ul>
   
   <router-outlet></router-outlet>
+</section>
+
 </body>
 
 
