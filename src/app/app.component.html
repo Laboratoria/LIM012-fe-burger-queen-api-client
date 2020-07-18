@@ -1,13 +1,16 @@
 <img alt="Angular Logo" class="logo" src="../assets/logo.png"/>
 <body>
+  <section>
+    {{title}}!
+    <h2>Rutas de los componentes </h2>
+  </section>
   <!--<app-login></app-login>-->
-
-  <h2>Primer componente </h2>
+  
   <ul>
     <li routerLink="home">home</li>
     <li routerLink="login">login</li>
     <li routerLink="nav">navbar</li>
-    <li routerLink="register">contact</li>
+    <li routerLink="register">register</li>
   </ul>
   
   <router-outlet></router-outlet>
