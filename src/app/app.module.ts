@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { RouterRoutingModule } from './router–routing.module';
 
@@ -22,6 +23,7 @@ import { Page404Component } from './components/page404/page404.component';
   imports: [
     BrowserModule,
     RouterRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
