@@ -1,0 +1,20 @@
+@mixin container($ancho, $alto)
+  width: $ancho
+  height: $alto
+  
+.logo
+  @include container(7rem, 2rem)
+
+article
+  text-align: center
+
+$layout-breakpoint-tablet: 321px
+
+@media (min-width: $layout-breakpoint-tablet)
+  .logo
+    @include container(462px, 130px)
+    display: flex
+    
+
+    
+

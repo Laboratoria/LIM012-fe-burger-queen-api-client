@@ -1,0 +1,21 @@
+@mixin input($ancho, $alto)
+  width: $ancho
+  height: $alto
+  
+.loginForm
+  display: flex
+  background: #F7B610
+  border: 10px solid #F7B610
+  box-sizing: border-box
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 50px  
+   @include input(465px, 62px)
+
+.inputForm
+  display: flex
+  border: 2px solid #F7B610
+  box-sizing: border-box
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 50px
+  margin: 10px 
+   @include input(465px, 62px)
