@@ -12,8 +12,8 @@ const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'nav', component: NavbarComponent},
-  {path: 'register', component: RegisterComponent },
+  {path: 'home/nav', component: NavbarComponent},
+  {path: 'home/register', component: RegisterComponent },
   {path: '**', component: Page404Component },
 ];
 
