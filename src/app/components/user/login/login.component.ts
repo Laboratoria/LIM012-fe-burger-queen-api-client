@@ -21,6 +21,7 @@ export class LoginComponent {
   login(){
     console.log(this.email);
     console.log(this.password);
+    this.router.navigate(['/home']);
   }
 
 }
