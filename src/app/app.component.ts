@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 
 })
- 
+
 export class AppComponent {
   title = 'LIM012-fe-burger-queen-api-client';
 }
