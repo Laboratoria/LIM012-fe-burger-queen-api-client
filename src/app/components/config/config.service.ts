@@ -8,7 +8,11 @@ import { Observable, throwError } from 'rxjs';
 
 export class ConfigService {
   constructor(private http: HttpClient) {}
-  headers: HttpHeaders = new HttpHeaders({
-    "Content-Type": "application/json"
-  });
+
+  login(users): Observable<any> {
+    return this.http.post("http://localhost:3000/users", users);
+  // headers: HttpHeaders = new HttpHeaders({
+  //   "Content-Type": "application/json"
+  // });
+}
 }

@@ -15,6 +15,7 @@ import { LoginComponent } from './components/user/login/login.component';
 import { Page404Component } from './components/page404/page404.component';
 import { BreakfastComponent } from './components/breakfast/breakfast.component';
 import { OrdersKitchenComponent } from './components/orders-kitchen/orders-kitchen.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { OrdersKitchenComponent } from './components/orders-kitchen/orders-kitch
     Page404Component,
     BreakfastComponent,
     OrdersKitchenComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
