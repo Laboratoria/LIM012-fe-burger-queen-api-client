@@ -18,10 +18,14 @@ export class LoginComponent {
     private router: Router
   ) { }
 
-  login(): void {
-    console.log(this.email);
-    console.log(this.password);
+  login(): void{
     this.router.navigate(['/home']);
+    const user = {email: this.email, password: this.password};
+    this.configService.login(user).subscribe( data => {
+      console.log(data);
+      this.router.navigate(['/orders']);
+    });
   }
-
 }
+
+
