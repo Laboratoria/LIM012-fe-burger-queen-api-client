@@ -39,6 +39,11 @@
       "email": "",
       "password": "",
       "id": 8
+    },
+    {
+      "id": 10,
+      "email": "acuario114000@gmail.com",
+      "password": "123456"
     }
   ]
 }
