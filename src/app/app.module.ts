@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { Page404Component } from './components/page404/page404.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { Page404Component } from './components/page404/page404.component';
     HomeComponent,
     NavbarComponent,
     RegisterComponent,
-    Page404Component
+    Page404Component,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

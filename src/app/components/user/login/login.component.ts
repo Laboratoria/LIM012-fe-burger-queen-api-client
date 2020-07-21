@@ -18,7 +18,7 @@ export class LoginComponent {
     private router: Router
   ) { }
 
-  login(){
+  login(): void {
     console.log(this.email);
     console.log(this.password);
     this.router.navigate(['/home']);
