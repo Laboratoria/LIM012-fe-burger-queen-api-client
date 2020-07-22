@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'LIM012-fe-burger-queen-api-client';
+  title = 'LIM012-fe-burger-queen-api-client1';
 }
