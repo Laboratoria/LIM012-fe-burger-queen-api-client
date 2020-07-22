@@ -1,7 +1,9 @@
+import { ConfigService } from './components/config/config.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ConfigcontrollerAuthService } from './components/config/configControllerAuth/configcontroller-auth.service';
 
 // routes
 import { RouterRoutingModule } from './router–routing.module';
@@ -35,7 +37,13 @@ import { OrdersComponent } from './components/orders/orders.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:  HTTP_INTERCEPTORS,
+      useClass: ConfigcontrollerAuthService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

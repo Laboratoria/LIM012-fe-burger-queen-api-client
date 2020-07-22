@@ -9,31 +9,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
   providers: [ConfigService],
 })
-export class LoginComponent {
-  email: string;
-  password: string;
+export class LoginComponent implements OnInit {
+  public email: string;
+  public password: string;
 
   constructor(
-    public configService: ConfigService,
+    private configService: ConfigService,
     private router: Router
   ) { }
 
-  // ngOnInit(): void {
-  //   throw new Error('Method not implemented.');
-  // }
-
-  // ngOnInit(): any {
-  //   this.configService.getUsers().subscribe(arg => {
-  //     return this.users = arg;
-  //   });
-  // }
+  ngOnInit(): void {
+  }
 
   login(): void{
-    this.router.navigate(['/home']);
+    sessionStorage.setItem('emailCurrentUser', this.email);
+    const property = JSON.stringify(this.email);
+
     const user = {email: this.email, password: this.password};
+
     this.configService.login(user).subscribe( data => {
       console.log(data);
+      this.router.navigate(['/home']);
     });
+
   }
 }
 
