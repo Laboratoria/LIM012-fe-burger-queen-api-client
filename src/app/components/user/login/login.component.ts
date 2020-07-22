@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass'],
+  styleUrls: ['./login.component.scss'],
   providers: [ConfigService],
 })
 export class LoginComponent {
@@ -14,16 +14,25 @@ export class LoginComponent {
   password: string;
 
   constructor(
-    private configService: ConfigService,
+    public configService: ConfigService,
     private router: Router
   ) { }
+
+  // ngOnInit(): void {
+  //   throw new Error('Method not implemented.');
+  // }
+
+  // ngOnInit(): any {
+  //   this.configService.getUsers().subscribe(arg => {
+  //     return this.users = arg;
+  //   });
+  // }
 
   login(): void{
     this.router.navigate(['/home']);
     const user = {email: this.email, password: this.password};
     this.configService.login(user).subscribe( data => {
       console.log(data);
-      this.router.navigate(['/orders']);
     });
   }
 }
