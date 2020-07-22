@@ -1,49 +1,29 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "acuario1140@gmail.com",
       "password": "123456"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "anonimo@gmail.com",
       "password": "123456"
     },
     {
       "email": "acuario1140@gmail.com",
       "password": "123456",
-      "id": 3
-    },
-    {
-      "email": "juana@gmail.com",
-      "password": "12345678",
-      "id": 4
+      "id": "e7qoEze"
     },
     {
       "email": "acuario1140@gmail.com",
       "password": "123456",
-      "id": 5
+      "id": "SbLjVVq"
     },
     {
-      "id": 6,
-      "email": "emiliano@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": 7,
-      "email": "emiliano@gmail.com",
-      "password": "123456"
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": 8
-    },
-    {
-      "id": 10,
-      "email": "acuario114000@gmail.com",
-      "password": "123456"
+      "email": "acuario1140@gmail.com",
+      "password": "123456",
+      "id": "8pG9XQw"
     }
   ]
 }
