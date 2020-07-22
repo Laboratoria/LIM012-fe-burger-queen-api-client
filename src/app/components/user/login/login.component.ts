@@ -18,16 +18,6 @@ export class LoginComponent {
     private router: Router
   ) { }
 
-  // ngOnInit(): void {
-  //   throw new Error('Method not implemented.');
-  // }
-
-  // ngOnInit(): any {
-  //   this.configService.getUsers().subscribe(arg => {
-  //     return this.users = arg;
-  //   });
-  // }
-
   login(): void{
     this.router.navigate(['/home']);
     const user = {email: this.email, password: this.password};

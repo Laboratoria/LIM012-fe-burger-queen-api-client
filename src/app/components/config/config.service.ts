@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 import { Observable, throwError } from 'rxjs';
 
 @Injectable({
@@ -9,11 +10,10 @@ import { Observable, throwError } from 'rxjs';
 export class ConfigService {
   constructor(private http: HttpClient) {}
 
-  login(users): Observable<any> {
-    // return this.http.post("http://localhost:3001/auth", users);
-    return this.http.post("http://localhost:3000/users", users);
-  // headers: HttpHeaders = new HttpHeaders({
-  //   "Content-Type": "application/json"
-  // });
-}
+  login(users: any): Observable<any> {
+    return this.http.post<any>(`${environment}auth`, users);
+  }
+  tokenId(): string {
+     return sessionStorage.getItem('token');
+  }
 }
