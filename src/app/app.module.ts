@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-//routes
+// routes
 import { RouterRoutingModule } from './router–routing.module';
 
-//components
+// components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { Page404Component } from './components/page404/page404.component';
+import { BreakfastComponent } from './components/breakfast/breakfast.component';
+import { OrdersKitchenComponent } from './components/orders-kitchen/orders-kitchen.component';
 import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
@@ -23,6 +25,8 @@ import { OrdersComponent } from './components/orders/orders.component';
     NavbarComponent,
     RegisterComponent,
     Page404Component,
+    BreakfastComponent,
+    OrdersKitchenComponent,
     OrdersComponent
   ],
   imports: [
