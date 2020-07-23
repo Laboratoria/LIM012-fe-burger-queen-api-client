@@ -22,14 +22,13 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void{
+    const user = {email: this.email, password: this.password};
     sessionStorage.setItem('emailCurrentUser', this.email);
     const property = JSON.stringify(this.email);
-
-    const user = {email: this.email, password: this.password};
-
     this.configService.login(user).subscribe( data => {
-      console.log(data);
+      this.configService.setToken(data.token);
       this.router.navigate(['/home']);
+      console.log(data.token);
     });
 
   }
