@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public email: string;
   public password: string;
+  public user: any;
 
   constructor(
     private configService: ConfigService,
@@ -22,10 +23,11 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void{
-    const user = {email: this.email, password: this.password};
+    this.user = {email: this.email || '', password: this.password || ''};
     sessionStorage.setItem('emailCurrentUser', this.email);
-    const property = JSON.stringify(this.email);
-    this.configService.login(user).subscribe( data => {
+    console.log(this.user);
+    // const property = JSON.stringify(this.email);
+    this.configService.login(this.user).subscribe( data => {
       this.configService.setToken(data.token);
       this.router.navigate(['/home']);
       console.log(data.token);

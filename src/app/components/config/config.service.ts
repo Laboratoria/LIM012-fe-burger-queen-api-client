@@ -19,9 +19,9 @@ export class ConfigService {
     return this.http.post<any>(`${this.url}auth`, users);
   }
 
-  tokenId(): string {
-    return sessionStorage.getItem('token');
-  }
+  // tokenId(): string {
+  //  return sessionStorage.getItem('token');
+  // }
 
   setToken(token: String) {
     return sessionStorage.set('token', token);
