@@ -15,12 +15,12 @@ export class ConfigService {
     this.url = environment.apiUrl;
   }
 
-  login(users: any): Observable<any> {
-    return this.http.post<any>(`${this.url}auth`, users);
+  login(user: any): Observable<any> {
+    return this.http.post<any>(`${this.url}auth`, user);
   }
 
   // tokenId(): string {
-  //  return sessionStorage.getItem('token');
+  //   return sessionStorage.getItem('token');
   // }
 
   setToken(token: String) {
