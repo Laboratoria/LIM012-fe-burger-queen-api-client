@@ -23,8 +23,8 @@ export class ConfigService {
   //   return sessionStorage.getItem('token');
   // }
 
-  setToken(token: String) {
-    return sessionStorage.set('token', token);
+  setToken(token: string) {
+    return sessionStorage.setItem('token', token);
   }
   getToken(): string {
     return sessionStorage.get('token');
