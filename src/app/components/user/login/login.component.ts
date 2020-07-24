@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from './../../config/config.service';
 import { Router } from '@angular/router';
+import { pipe } from 'rxjs';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
   public email: string;
   public password: string;
   public user: any;
+  public isError = false;
 
   constructor(
     private configService: ConfigService,
@@ -29,15 +31,22 @@ export class LoginComponent implements OnInit {
 
     // const property = JSON.stringify(this.user);
     // console.log(property);
-    
+
     this.configService.login(this.user).subscribe( data => {
       console.log(data);
+      // sessionStorage.setItem('token', data.token);
       this.configService.setToken(data.token);
       this.router.navigate(['/home']);
-     
-    });
-
-  };
+    },
+     error => {
+       this.messageError();
+     }
+    );
+  }
+  messageError(): void {
+    this.isError = true;
+    console.log('OPS algo salio mal');
+  }
 }
 
 
