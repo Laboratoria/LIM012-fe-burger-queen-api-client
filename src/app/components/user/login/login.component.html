@@ -1,11 +1,11 @@
      
     <form class="custom-form" method="post" >
+      <div class="warning-validator" *ngIf="isError">
+        <strong> ⚠️ Por favor ingrese correctamente todos los campos </strong>
+      </div>
         <input class= "loginForm" type="email" [(ngModel)]="email" name="email" placeholder="Email"required="required"/>
         <input class= "loginForm" type="password" [(ngModel)]="password" name="password" placeholder="Password" required="required"/>
         <button class= "loginForm-button" type="submit" (click)="login()">Ingresar</button>
-        <div class="warning validator" *ngIf="isError">
-        <strong>Por favor verifique sus datos</strong>
-      </div>
       </form>
 
 
