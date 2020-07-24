@@ -6,7 +6,8 @@
 .logo {
   @include container(362px, 130px);
   display: flex;
-  margin: 85px;
+  margin-top: 40%;
+  margin-left: 20%;
 }
 
 article {
@@ -19,6 +20,6 @@ $layout-breakpoint-tablet: 321px;
   .logo {
     @include container(462px, 130px);
     display: flex;
-    margin: 145px;
+    margin-left: 35%;
   }
 }

@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
     this.isError = true;
     setTimeout(() => {
       this.isError = false;
-    }, 4000);
+    }, 8000);
     console.log('Ops esto es un error');
   }
 }
