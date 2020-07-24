@@ -44,10 +44,10 @@ export class LoginComponent implements OnInit {
   }
     messageError() {
     this.isError = true;
-    console.log('Por favor verifique sus datos');
     setTimeout(() => {
       this.isError = false;
     }, 4000);
+    console.log('Ops esto es un error');
   }
 }
 
