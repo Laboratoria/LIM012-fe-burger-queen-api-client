@@ -3,7 +3,6 @@ import { ConfigService } from './../../config/config.service';
 import { Router } from '@angular/router';
 import { pipe } from 'rxjs';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -31,21 +30,24 @@ export class LoginComponent implements OnInit {
 
     // const property = JSON.stringify(this.user);
     // console.log(property);
-
-    this.configService.login(this.user).subscribe( data => {
+    this.configService.login(this.user).subscribe(
+      data => {
       console.log(data);
       // sessionStorage.setItem('token', data.token);
       this.configService.setToken(data.token);
       this.router.navigate(['/home']);
     },
-     error => {
-       this.messageError();
-     }
+       error => {
+         this.messageError();
+       }
     );
   }
-  messageError(): void {
+    messageError() {
     this.isError = true;
-    console.log('OPS algo salio mal');
+    console.log('Por favor verifique sus datos');
+    setTimeout(() => {
+      this.isError = false;
+    }, 4000);
   }
 }
 
