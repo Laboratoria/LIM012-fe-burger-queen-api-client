@@ -3,22 +3,13 @@ form {
   font-size: 100%;
 }
 
-$layout-breakpoint-mobile: 321px;
-
-@media (min-width: $layout-breakpoint-mobile) {
-  .loginForm {
-    margin-top: 10%;
-    margin-left: 15%;
-  }
-}
-
 @mixin input($ancho, $alto) {
   width: $ancho;
   height: $alto;
 }
 
 .loginForm {
-  @include input(465px, 62px);
+  @include input(60%, 62px);
 }
 
 .loginForm {
@@ -28,24 +19,27 @@ $layout-breakpoint-mobile: 321px;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
-  margin-top: 2%;
-  margin-left: 35%;
+  margin-top: 5%;
+  margin-left: 20%;
   font-family: 'Bangers', cursive;
 }
 
 .loginForm-button {
-  @include input(190px, 62px);
+  @include input(30%, 62px);
 }
 
 .loginForm-button {
   display: flex;
+  padding-top: 4%;
+  padding-left: 4%;
+  text-align: center;
   background: #F7B610;
   border: 10px solid #F7B610;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
-  margin-top: 2%;
-  margin-left: 45%;
+  margin-top: 10%;
+  margin-left: 35%;
   font-family: 'Bangers', cursive;
 }
 
@@ -55,3 +49,24 @@ $layout-breakpoint-mobile: 321px;
   margin-left: 40%;
 }
 
+$layout-breakpoint-tablet: 400px;
+// aqui todo lo modificado afecta la vista tablet
+@media (min-width: $layout-breakpoint-tablet) {
+  .loginForm {
+    margin-left: 33%;
+    margin-top: 2%;
+  }
+  .loginForm {
+    @include input(40%, 62px);
+  }
+
+  .loginForm-button {
+    @include input(10%, 62px);
+  }
+
+  .loginForm-button {
+    margin-left: 49%;
+    padding-top: 1%;
+    padding-left: 2.5%;
+  }
+}

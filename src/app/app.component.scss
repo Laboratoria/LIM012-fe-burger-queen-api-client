@@ -7,19 +7,19 @@
   @include container(362px, 130px);
   display: flex;
   margin-top: 40%;
-  margin-left: 20%;
 }
 
 article {
   text-align: center;
 }
 
-$layout-breakpoint-tablet: 321px;
-
+$layout-breakpoint-tablet: 400px;
+// todo lo que cambie aqui modifica la vista tablet
 @media (min-width: $layout-breakpoint-tablet) {
   .logo {
     @include container(462px, 130px);
     display: flex;
     margin-left: 35%;
+    margin-top: 10%;
   }
 }
