@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ConfigService } from './../../config/config.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,6 +12,7 @@ export class LoginComponent implements OnInit {
   public email: string;
   public password: string;
   public user: any;
+  public isError = false;
 
   constructor(
     private configService: ConfigService,
@@ -29,11 +29,20 @@ export class LoginComponent implements OnInit {
 
     // const property = JSON.stringify(this.user);
     // console.log(property);
-    this.configService.login(this.user).subscribe( data => {
+    this.configService.login(this.user).subscribe(
+      data => {
       console.log(data);
-      // this.configService.setToken(data.token);
+      this.configService.setToken(data.token);
       this.router.navigate(['/home']);
-    });
+    },
+       error => {
+         this.messageError();
+       }
+    );
+  }
+    messageError() {
+    this.isError = true;
+    console.log('Ops esto es un error');
   }
 }
 
