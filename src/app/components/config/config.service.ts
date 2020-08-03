@@ -24,7 +24,7 @@ export class ConfigService {
   //   return sessionStorage.getItem('token');
   // }
 
-  setToken(token: string) {
+  setToken(token: string): void {
     return sessionStorage.setItem('token', token);
   }
 
@@ -34,7 +34,7 @@ export class ConfigService {
   getUser() {
     return this.http.get(`${this.url}auth`);
   }
-  getUserLogged() {
+  getUserLogged(): void {
     const token = this.getToken();
     // Aquí iría el endpoint para devolver el usuario para un token
   }

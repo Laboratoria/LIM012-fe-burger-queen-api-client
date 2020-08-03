@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from './../../config/config.service';
 import { Router } from '@angular/router';
-import { pipe } from 'rxjs';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
        }
     );
   }
-    messageError() {
+    messageError(): void {
     this.isError = true;
     setTimeout(() => {
       this.isError = false;
