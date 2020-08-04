@@ -38,6 +38,7 @@ import { OrdersComponent } from './components/orders/orders.component';
     FormsModule
   ],
   providers: [
+    RouterRoutingModule,
     {
       provide:  HTTP_INTERCEPTORS,
       useClass: ConfigcontrollerAuthService,
