@@ -28,7 +28,4 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('deberia retornar false', () => {
-    expect(component.user).toBeTruthy();
-  });
 });
