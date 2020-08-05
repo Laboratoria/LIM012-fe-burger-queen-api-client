@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 
 })
+
 export class HomeComponent implements OnInit {
   title = 'LIM012-fe-burger-queen-api-client';
-  // parentMessage = "message from parent";
+  // parentMessage = "message from parent"
   constructor() { }
 
   private router: Router;
