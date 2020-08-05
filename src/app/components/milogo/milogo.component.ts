@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./milogo.component.css']
 })
 export class MilogoComponent implements OnInit {
-  @Input() childMessage: string;
+  // etiqueta Input en el componente hijo
+  @Input() hijo: any;
 
   constructor() { }
 
