@@ -1,5 +1,5 @@
 <section>
-  <app-milogo [logoHijo]="logoPadre"></app-milogo>
+
   <app-navbar [hijoNavbar]="padreNavbar">   
   </app-navbar>
 
@@ -8,13 +8,10 @@
       </h1>
 
     <ul>
-      <!-- <li routerLink="nav">navbar</li>
-      <li routerLink="breakfast">breakfast</li>
-      <li routerLink="register">register</li>-->
+      <!--<li routerLink="register">register</li>-->
       <button class= "options-button" routerLink="breakfast">Desayuno</button>
-      <button class= "options-button" routerLink="registrer">Almuerzo</button >
+      <button class= "options-button" routerLink="lunch">Almuerzo</button >
       <button class= "options-button"  routerLink="orders">Pedidos</button >
-
     </ul>
     
     <router-outlet></router-outlet>

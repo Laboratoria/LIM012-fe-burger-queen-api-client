@@ -1,3 +1,4 @@
+$blue: #071685;
 $yellow: #F7B610;
 $red:  #E30D2C;
 
@@ -7,17 +8,17 @@ $red:  #E30D2C;
 }
 
 .name-client{
-    color: #F7B610;
-    border: 2pt solid  #e52d27;
+    color: $yellow;
+    border: 2pt solid $red;
 }
 
 .total-bill{
-    color: #e52d27;
-    border: 2pt solid  #e52d27;
+    color: $red;
+    border: 2pt solid $red;
 }
 
 .btn-post-order{
-    background-color: #F7B610;
-    color: var(--main-color-red);
+    background-color: $yellow;
+    color: $blue;
     text-align: center;
 }

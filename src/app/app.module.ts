@@ -20,6 +20,7 @@ import { BreakfastComponent } from './components/breakfast/breakfast.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { MilogoComponent } from './components/milogo/milogo.component';
 import { FoodOrdersComponent } from './components/food-orders/food-orders.component';
+import { LunchComponent } from './components/lunch/lunch.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FoodOrdersComponent } from './components/food-orders/food-orders.compon
     OrdersComponent,
     OrdersComponent,
     MilogoComponent,
-    FoodOrdersComponent
+    FoodOrdersComponent,
+    LunchComponent
   ],
   imports: [
     BrowserModule,
