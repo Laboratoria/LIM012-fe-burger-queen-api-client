@@ -1,12 +1,9 @@
-:root{ 
-    --data-color-yellow: #F7B610; 
-    --data-color-red:  #E30D2C; 
-  }
+$yellow: #F7B610;
+$red:  #E30D2C;
 
 .header-order{    
-    background-color: var(--main-color-yellow);
-    border: 2pt solid  #afa09f;
-    
+    background-color: $yellow;
+    border: 2pt solid $red;
 }
 
 .name-client{
