@@ -1,23 +1,26 @@
 :root{ 
-    --main-color-yellow: #F7B610; 
-    --main-color-red: #E30D2C; 
-}
+    --data-color-yellow: #F7B610; 
+    --data-color-red:  #E30D2C; 
+  }
 
 .header-order{    
-    color: var(--main-color-yellow);
-    border: 2pt solid var(--main-color-red);
+    background-color: var(--main-color-yellow);
+    border: 2pt solid  #afa09f;
+    
 }
 
 .name-client{
-    color: var(--main-color-yellow);
-    border: 2pt solid var(--main-color-red);
+    color: #F7B610;
+    border: 2pt solid  #e52d27;
 }
 
 .total-bill{
-    color: var(--main-color-yellow);
-    border: 2pt solid var(--main-color-red);
+    color: #e52d27;
+    border: 2pt solid  #e52d27;
 }
 
 .btn-post-order{
+    background-color: #F7B610;
+    color: var(--main-color-red);
     text-align: center;
 }
