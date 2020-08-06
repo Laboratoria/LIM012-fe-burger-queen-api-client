@@ -1,0 +1,24 @@
+$blue: #071685;
+$yellow: #F7B610;
+$red:  #E30D2C;
+
+.header-order{    
+    background-color: $yellow;
+    border: 2pt solid $red;
+}
+
+.name-client{
+    color: $yellow;
+    border: 2pt solid $red;
+}
+
+.total-bill{
+    color: $red;
+    border: 2pt solid $red;
+}
+
+.btn-post-order{
+    background-color: $yellow;
+    color: $blue;
+    text-align: center;
+}

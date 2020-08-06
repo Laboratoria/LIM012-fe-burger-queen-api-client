@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 
 export class HomeComponent implements OnInit {
   title = 'LIM012-fe-burger-queen-api-client';
+  logoPadre = 'mensaje desde el padre';
   padreNavbar = 'soy un header';
 
   constructor() { }

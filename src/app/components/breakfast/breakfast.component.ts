@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./breakfast.component.scss']
 })
 export class BreakfastComponent implements OnInit {
-  padreNavbar = 'soy un header';
+  navbarPadre = 'mensaje desde el padre';
   constructor() { }
 
   ngOnInit(): void {

@@ -1,3 +1,12 @@
+$blue: #071685;
+$yellow: #F7B610;
+$red:  #E30D2C;
+
+.chooseOptionHome {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
 @mixin button($ancho, $alto) {
   width: $ancho;
   height: $alto;
@@ -9,14 +18,35 @@
 
 .options-button {
   display: flex;
-  background: #F7B610;
-  border: 10px solid #F7B610;
-  box-sizing: border-box;
+  background: $yellow;
+  border: 10px solid $yellow;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
-  margin-top: 2%;
-  margin-left: 40%;
-  font-family: 'Bangers', cursive;
+  margin-top: 10%;
+  margin-left: 4%;
+  padding-left: 28%;
+  padding-top: 4%;
+  font-size: xx-large;
 }
 
+$layout-breakpoint-tablet: 400px;
+// aqui todo lo modificado afecta la vista tablet
+@media (min-width: $layout-breakpoint-tablet) {
+  .chooseOptionHome {
+    margin-top: 15%;
+    margin-left: 38%;
+  }
+
+  .options-button {
+    margin-left: 40%;
+    margin-top: 2%;
+    padding-left: 7%;
+    padding-top: 1%;
+    font-size: xx-large;
+  }
+  
+  .articleButton {
+    margin-top: 1%;
+  }
+}
 

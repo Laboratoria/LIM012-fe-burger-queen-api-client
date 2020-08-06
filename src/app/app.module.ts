@@ -1,9 +1,9 @@
-import { ConfigService } from './components/config/config.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ConfigcontrollerAuthService } from './components/config/configControllerAuth/configcontroller-auth.service';
+import { ConfigcontrollerAuthService } from '../app/services/auth/config-controller-auth.service';
 
 // routes
 import { RouterRoutingModule } from './router–routing.module';
@@ -16,9 +16,11 @@ import { RegisterComponent } from './components/user/register/register.component
 import { LoginComponent } from './components/user/login/login.component';
 import { Page404Component } from './components/page404/page404.component';
 import { BreakfastComponent } from './components/breakfast/breakfast.component';
-import { OrdersKitchenComponent } from './components/orders-kitchen/orders-kitchen.component';
+
 import { OrdersComponent } from './components/orders/orders.component';
 import { MilogoComponent } from './components/milogo/milogo.component';
+import { FoodOrdersComponent } from './components/food-orders/food-orders.component';
+import { LunchComponent } from './components/lunch/lunch.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,11 @@ import { MilogoComponent } from './components/milogo/milogo.component';
     RegisterComponent,
     Page404Component,
     BreakfastComponent,
-    OrdersKitchenComponent,
     OrdersComponent,
-    MilogoComponent
+    OrdersComponent,
+    MilogoComponent,
+    FoodOrdersComponent,
+    LunchComponent
   ],
   imports: [
     BrowserModule,
