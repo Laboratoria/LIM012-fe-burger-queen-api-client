@@ -16,7 +16,7 @@ import { RegisterComponent } from './components/user/register/register.component
 import { LoginComponent } from './components/user/login/login.component';
 import { Page404Component } from './components/page404/page404.component';
 import { BreakfastComponent } from './components/breakfast/breakfast.component';
-import { OrdersKitchenComponent } from './components/orders-kitchen/orders-kitchen.component';
+
 import { OrdersComponent } from './components/orders/orders.component';
 import { MilogoComponent } from './components/milogo/milogo.component';
 
@@ -29,7 +29,7 @@ import { MilogoComponent } from './components/milogo/milogo.component';
     RegisterComponent,
     Page404Component,
     BreakfastComponent,
-    OrdersKitchenComponent,
+    OrdersComponent,
     OrdersComponent,
     MilogoComponent
   ],

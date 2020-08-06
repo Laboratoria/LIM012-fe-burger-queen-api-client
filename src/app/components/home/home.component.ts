@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   title = 'LIM012-fe-burger-queen-api-client';
-  padre = 'mensaje desde el padre';
+  logoPadre = 'mensaje desde el padre';
 
   constructor() { }
 

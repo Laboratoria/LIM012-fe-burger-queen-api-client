@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   public password: string;
   public user: any;
   public isError = false;
-  padre = 'mensaje desde el padre';
+  logoPadre = 'mensaje desde el padre';
 
   constructor(
     private configService: ConfigService,
