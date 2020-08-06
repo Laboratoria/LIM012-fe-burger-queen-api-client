@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
   navbarPadre = 'mensaje desde el padre';
+  foodordersPadre = 'mensaje desde el padre';
   constructor() { }
 
   ngOnInit(): void {

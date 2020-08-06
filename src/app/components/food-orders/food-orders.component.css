@@ -1,0 +1,23 @@
+:root{ 
+    --main-color-yellow: #F7B610; 
+    --main-color-red: #E30D2C; 
+}
+
+.header-order{    
+    color: var(--main-color-yellow);
+    border: 2pt solid var(--main-color-red);
+}
+
+.name-client{
+    color: var(--main-color-yellow);
+    border: 2pt solid var(--main-color-red);
+}
+
+.total-bill{
+    color: var(--main-color-yellow);
+    border: 2pt solid var(--main-color-red);
+}
+
+.btn-post-order{
+    text-align: center;
+}
