@@ -10,7 +10,7 @@
   padding: 1% 1% 0 0;
 }
 
-form {
+.loginForm {
   font-family: 'Bangers', cursive;
   font-size: 100%;
   margin-top: 20%;
@@ -21,11 +21,11 @@ form {
   height: $alto;
 }
 
-.loginForm {
+.inputLoginForm {
   @include input(60%, 62px);
 }
 
-.loginForm {
+.inputLoginForm {
   display: flex;
   background: #F7B610;
   border: 10px solid #F7B610;
@@ -43,8 +43,7 @@ form {
 .loginForm-button {
   display: flex;
   padding-top: 4%;
-  padding-left: 4%;
-
+  padding-left: 5%;
   background: #F7B610;
   border: 10px solid #F7B610;
   box-sizing: border-box;
@@ -65,21 +64,21 @@ $layout-breakpoint-tablet: 400px;
 // aqui todo lo modificado afecta la vista tablet
 @media (min-width: $layout-breakpoint-tablet) {
   .logo {
-    @include container(462px, 130px);
+    @include container(462px, 190px);
     display: flex;
     margin-left: 35%;
-    margin-top: 0;
-  }
-
-  form {
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   .loginForm {
+    margin-top: 5%;
+  }
+
+  .inputLoginForm {
     margin-left: 33%;
     margin-top: 2%;
   }
-  .loginForm {
+  .inputLoginForm {
     @include input(40%, 62px);
   }
 
@@ -89,6 +88,7 @@ $layout-breakpoint-tablet: 400px;
 
   .loginForm-button {
     margin-left: 49%;
+    margin-top: 5%;
     padding-top: 1%;
     padding-left: 2.5%;
   }
