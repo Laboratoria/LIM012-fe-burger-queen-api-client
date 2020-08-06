@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'LIM012-fe-burger-queen-api-client1'`, () => {
+  it(`should have as title 'LIM012-fe-burger-queen-api-client'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('LIM012-fe-burger-queen-api-client1');
+    expect(app.title).toEqual('LIM012-fe-burger-queen-api-client');
   });
 
 });
