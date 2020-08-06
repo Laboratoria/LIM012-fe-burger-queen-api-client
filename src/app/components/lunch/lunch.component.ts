@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lunch.component.scss']
 })
 export class LunchComponent implements OnInit {
-
+  navbarPadre = 'mensaje desde el padre';
   constructor() { }
 
   ngOnInit(): void {

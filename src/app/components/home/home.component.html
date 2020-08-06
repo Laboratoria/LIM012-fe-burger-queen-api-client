@@ -1,18 +1,17 @@
 <section>
 
-  <app-navbar [hijoNavbar]="padreNavbar">   
-  </app-navbar>
+  <app-navbar [hijoNavbar]="padreNavbar"></app-navbar>
 
       <h1>
         Hola, usuario por favor escoge una opcion:
       </h1>
 
-    <ul>
+    <article class="articleButton">
       <!--<li routerLink="register">register</li>-->
       <button class= "options-button" routerLink="breakfast">Desayuno</button>
       <button class= "options-button" routerLink="lunch">Almuerzo</button >
       <button class= "options-button"  routerLink="orders">Pedidos</button >
-    </ul>
+      </article>
     
     <router-outlet></router-outlet>
   </section>
