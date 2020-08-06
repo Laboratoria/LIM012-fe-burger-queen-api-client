@@ -6,9 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  logoPadre = 'mensaje desde el padre';
-
-  @Input() navbarHijo: any;
+  padreLogo = 'mensaje desde el padre';
+  @Input() hijoNavbar: any;
   constructor() { }
 
   ngOnInit(): void {
