@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ConfigService } from '../config.service';
+import { AuthConfigService } from '../auth-config.service';
 
 
 @Injectable({
@@ -9,11 +9,10 @@ import { ConfigService } from '../config.service';
 })
 export class ConfigcontrollerAuthService implements HttpInterceptor {
 
-  constructor(private configService: ConfigService) { }
+  constructor(private authConfigService: AuthConfigService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const idToken = sessionStorage.getItem('currentUser');
-    // const idToken = this.configService.tokenId();
 
     if (idToken) {
       const clones = req.clone({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from './../../config/config.service';
+import { AuthConfigService } from '../../../services/auth-config.service';
 import { Router } from '@angular/router';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
@@ -7,7 +7,7 @@ import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  providers: [ConfigService],
+  providers: [AuthConfigService],
 })
 export class LoginComponent implements OnInit {
   public email: string;
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   public isError = false;
 
   constructor(
-    private configService: ConfigService,
+    private authConfigService: AuthConfigService,
     private router: Router
   ) { }
 
@@ -30,11 +30,11 @@ export class LoginComponent implements OnInit {
 
     // const property = JSON.stringify(this.user);
     // console.log(property);
-    this.configService.login(this.user).subscribe(
+    this.authConfigService.login(this.user).subscribe(
       data => {
       console.log(data);
       // sessionStorage.setItem('token', data.token);
-      this.configService.setToken(data.token);
+      this.authConfigService.setToken(data.token);
       this.router.navigate(['/home']);
     },
        error => {

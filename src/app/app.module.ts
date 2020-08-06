@@ -1,9 +1,9 @@
-import { ConfigService } from './components/config/config.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ConfigcontrollerAuthService } from './components/config/configControllerAuth/configcontroller-auth.service';
+import { ConfigcontrollerAuthService } from '../app/services/auth/config-controller-auth.service';
 
 // routes
 import { RouterRoutingModule } from './router–routing.module';

@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 
-export class ConfigService {
+export class AuthConfigService {
   public url: string;
   checkUser: any;
 
