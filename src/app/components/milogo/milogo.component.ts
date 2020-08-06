@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MilogoComponent implements OnInit {
   // etiqueta Input en el componente hijo
-  @Input() hijo: any;
+  @Input() hijoLogo: any;
 
   constructor() { }
 
