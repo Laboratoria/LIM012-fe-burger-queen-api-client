@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-breakfast',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./breakfast.component.scss']
 })
 export class BreakfastComponent implements OnInit {
-
+  padreNavbar = 'soy un header';
   constructor() { }
 
   ngOnInit(): void {
