@@ -31,8 +31,7 @@ getProducts(): void {
     response => {
       this.products = response;
       console.log(this.products);
-      console.log(this.products.id);
-   }
+    }
   );
   }
 }
