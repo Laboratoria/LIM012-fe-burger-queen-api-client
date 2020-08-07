@@ -12,7 +12,7 @@ import { ProductsService } from '../../services/products/products.service';
 })
 
 export class HomeComponent implements OnInit {
-  public product: any;
+  public products: any;
   logoPadre = 'mensaje desde el padre';
   padreNavbar = 'soy un header';
 
@@ -27,11 +27,11 @@ export class HomeComponent implements OnInit {
   }
 
 getProducts(): void {
-  this.productsService.getListProduct(this.product).subscribe(
+  this.productsService.getListProduct(this.products).subscribe(
     response => {
-      this.product = response;
-      console.log(this.product);
-      console.log(this.product.id);
+      this.products = response;
+      console.log(this.products);
+      console.log(this.products.id);
    }
   );
   }
