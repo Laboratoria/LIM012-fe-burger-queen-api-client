@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private productsService: ProductsService,
     private router: Router
+
   )
   {}
 
@@ -31,7 +32,7 @@ getProducts(): void {
     response => {
       this.products = response;
       console.log(this.products);
-      console.log(this.products.id);
+      console.log(this.products[0].name);
    }
   );
   }

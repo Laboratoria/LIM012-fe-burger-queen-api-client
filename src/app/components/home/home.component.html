@@ -10,6 +10,18 @@
 
     <article class="yellowSection">
     <p class="menu">MENU</p>
+    <table class="table-products">
+    
+        <tr *ngFor= "let product of products; let i = index"> 
+          <td> {{product.id}}</td>
+          <td> {{product.name}}</td>
+           <td> S/. {{product.price}}</td>
+        </tr>
+      
+
+
+    </table>
+
     </article>
 
       <router-outlet></router-outlet>
