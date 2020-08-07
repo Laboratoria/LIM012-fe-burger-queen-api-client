@@ -7,7 +7,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LunchComponent } from './components/lunch/lunch.component';
 import { Page404Component } from './components/page404/page404.component';
 import { RegisterComponent } from './components/user/register/register.component';
-import { BreakfastComponent } from './components/breakfast/breakfast.component';
 import { OrdersComponent } from './components/orders/orders.component';
 
 const appRoutes: Routes = [
@@ -16,7 +15,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'home/lunch', component: LunchComponent },
 
-  {path: 'home/breakfast', component: BreakfastComponent },
+  {path: 'home', component: HomeComponent },
   {path: 'home/orders', component: OrdersComponent },
   {path: '**', component: Page404Component },
 ];
