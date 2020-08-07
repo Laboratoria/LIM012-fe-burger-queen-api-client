@@ -76,6 +76,7 @@ $layout-breakpoint-tablet: 400px;
   }
   
   .articleButton {
+    display: flex;
     flex-direction: row;
   }
 }
