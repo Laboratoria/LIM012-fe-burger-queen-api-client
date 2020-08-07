@@ -1,28 +1,32 @@
 <section>
 
   <app-navbar [hijoNavbar]="padreNavbar"></app-navbar>
-
-  <article class="articleButton">
-    <button class= "options-button" routerLink="/home"(click)="getProducts()">Desayuno</button>
-    <button class= "options-button" routerLink="lunch">Almuerzo</button >
-    <button class= "options-button"  routerLink="orders">Pedidos</button >
-  </article>
-
-    <article class="yellowSection">
-    <p class="menu">MENU</p>
-    <table class="table-products">
-    
-        <tr *ngFor= "let product of products; let i = index"> 
-          <td> {{product.id}}</td>
-          <td> {{product.name}}</td>
-           <td> S/. {{product.price}}</td>
-        </tr>
       
 
+    <article class="articleButton">
+      <button class= "options-button" routerLink="/home"(click)="getProducts()">Desayuno</button>
+      <button class= "options-button" routerLink="lunch">Almuerzo</button >
+      <button class= "options-button"  routerLink="orders">Pedidos</button >
+    </article>
+  
+  <div class="breakfast-section-container">
+    <article class="yellow-section-left">
+      <p class="menu">MENU</p>
 
-    </table>
+      <table class="table-products">
+        <tr *ngFor= "let product of products; let i = index">
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+        </tr>
+      </table>
 
     </article>
+    
+     <article class="yellow-section-right">
+      <p class="client-info-select"></p>
+    </article>
+  </div>
+
 
       <router-outlet></router-outlet>
 </section>
