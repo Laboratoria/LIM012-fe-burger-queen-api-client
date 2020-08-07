@@ -17,6 +17,7 @@
         <tr *ngFor= "let product of products; let i = index">
           <td>{{product.name}}</td>
           <td>{{product.price}}</td>
+          <img src="{{product.image}}" alt="" class="product-image">
         </tr>
       </table>
 
@@ -30,3 +31,7 @@
 
       <router-outlet></router-outlet>
 </section>
+<script>
+  document.cookie = 'same-site-cookie=foo; SameSite=Lax'; 
+  document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
+  </script>
