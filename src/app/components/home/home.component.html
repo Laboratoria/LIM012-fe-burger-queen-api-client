@@ -2,16 +2,14 @@
 
   <app-navbar [hijoNavbar]="padreNavbar"></app-navbar>
 
-      <h1 class="chooseOptionHome">
-        Hola, usuario por favor escoge una opcion:
-      </h1>
+  <article class="articleButton">
+    <button class= "options-button" routerLink="/home"(click)="getProducts()">Desayuno</button>
+    <button class= "options-button" routerLink="lunch">Almuerzo</button >
+    <button class= "options-button"  routerLink="orders">Pedidos</button >
+    </article>
 
-    <article class="articleButton">
-      <!--<li routerLink="register">register</li>-->
-      <button class= "options-button" routerLink="breakfast">Desayuno</button>
-      <button class= "options-button" routerLink="lunch">Almuerzo</button >
-      <button class= "options-button"  routerLink="orders">Pedidos</button >
-      </article>
-    
+  <section class="yellowSection">
+   <p class="menu">MENU</p>
+  </section>
     <router-outlet></router-outlet>
   </section>
