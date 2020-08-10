@@ -15,9 +15,10 @@
 
       <table class="table-products">
         <tr *ngFor= "let product of products; let i = index">
-          <td>{{product.name}}</td>
-          <td>{{product.price}}</td>
-          <img src="{{product.image}}" alt="" class="product-image">
+          <td class="product-name">{{product.name}}</td>
+          <td class="product-price"> S/{{product.price}}</td>
+          <img src="../../../assets/menu/{{product.image}}" width="50px"alt="{{product.image}}" class="product-image">
+          
         </tr>
       </table>
 
@@ -31,7 +32,4 @@
 
       <router-outlet></router-outlet>
 </section>
-<script>
-  document.cookie = 'same-site-cookie=foo; SameSite=Lax'; 
-  document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
-  </script>
+

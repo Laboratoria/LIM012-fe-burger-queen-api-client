@@ -92,5 +92,14 @@ $layout-breakpoint-tablet: 400px;
     display: flex;
     flex-direction: row;
   }
+  .product-name{
+    padding-left: 20%;
+    font-size: large;
+  }
+  .product-price{
+    padding-left: 50%;
+  }
+  
+  
 }
 
