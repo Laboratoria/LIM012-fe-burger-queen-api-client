@@ -1,7 +1,7 @@
 <section>
 
   <app-navbar [hijoNavbar]="padreNavbar"></app-navbar>
-      
+    
 
     <article class="articleButton">
       <button class= "options-button" routerLink="/home"(click)="getProducts()">Desayuno</button>
@@ -14,10 +14,14 @@
       <p class="menu">MENU</p>
 
       <table class="table-products">
+        <th> PRODUCTOS</th>
+        <th> PRECIOS</th>
+    
         <tr *ngFor= "let product of products; let i = index">
           <td class="product-name">{{product.name}}</td>
           <td class="product-price"> S/{{product.price}}</td>
           <img src="../../../assets/menu/{{product.image}}" width="50px"alt="{{product.image}}" class="product-image">
+          
           
         </tr>
       </table>
