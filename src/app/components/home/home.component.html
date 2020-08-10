@@ -16,17 +16,26 @@
       <table class="table-products">
         <tr *ngFor= "let product of products; let i = index">
           <td>{{product.name}}</td>
-          <td>{{product.price}}</td>
+          <td> S./{{product.price}}</td>
         </tr>
       </table>
-
+      <router-outlet></router-outlet>
     </article>
     
      <article class="yellow-section-right">
-      <p class="client-info-select"></p>
+
+      <p class="client-info-select">CLIENTE</p>
+      <div class="product-resume-total">
+        PRODUCTO CANT PRECIO
+        <p class="total-amount">TOTAL</p>
+      </div>
+
+      <button class="cancel-order">CANCELAR</button>
+      <button class="send-order">ENVIAR A COCINA</button>
+
     </article>
   </div>
 
 
-      <router-outlet></router-outlet>
+      
 </section>

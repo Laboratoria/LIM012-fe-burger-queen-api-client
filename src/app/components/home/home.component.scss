@@ -3,14 +3,9 @@ $blueTranspa: rgba(7, 22, 133, 0.5);
 $yellow: #F7B610;
 $yellowTranspa: rgba(247, 182, 16, 0.5);
 $red:  #E30D2C;
-$redTranspa: rgba(227, 13, 44, 1);
+$redTranspa: rgba(227, 13, 44, 0.5);
 $gray: #E3DED5;
 $grayTranspa: rgba(227, 222, 213, 0.5);
-
-.chooseOptionHome {
-  margin-top: 5%;
-  margin-left: 5%;
-}
 
 @mixin button($ancho, $alto) {
   width: $ancho;
@@ -25,6 +20,7 @@ $grayTranspa: rgba(227, 222, 213, 0.5);
   background: $yellow;
   background: $yellowTranspa;
   border-radius: 20px 20px 0px 0px;
+  border-bottom: none;
   font-size: large;
 }
 
@@ -38,9 +34,8 @@ $grayTranspa: rgba(227, 222, 213, 0.5);
 }
 
 .yellow-section-left {
-
 width: 49vw;
-height: 70vh;
+height: 65vh;
 margin-left: 1%;
 margin-right: 0.5%;
 background: $yellowTranspa;
@@ -49,48 +44,81 @@ border-radius: 30px 0px 0px 30px;
 }
 
 .menu{
-  display: flex;
-  width: 107px;
-  height: 54px;
-  left: 55%;
-  top: 214%;
-  margin-top: 0.2%;
-  margin-left: 40%;
+  margin-top: 2%;
+  margin-left: 43%;
   font-family: 'Bangers';
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
-  line-height: 53px;
+  font-size: 300%;
   color: $red;
+  
 }
 
 .yellow-section-right {
   margin-right: 1%;
   width: 49vw;
-  height: 70vh;
+  height: 65vh;
   background: $yellowTranspa;  
   box-sizing: border-box;
   border-radius: 0px 30px 30px 0px;
 }
 
 .client-info-select {
-  width: 35vw;
-  height: 67px;
-margin-left: 5%;
-margin-top: 5%;
+  width: 43vw;
+  height: 10%;
+  margin-left: 5%;
+  margin-top: 5%;
   background: $grayTranspa;
   box-sizing: border-box;
   border-radius: 0px 30px 30px 0px;
 }
 
+.product-resume-total {  
+  width: 43vw;
+  height: 65%;
+  margin-left: 5%;
+  margin-top: 5%;
+  background: $grayTranspa;
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.total-amount {
+  position: absolute;
+  bottom:17%;
+  width: 35%;
+  height: 7%;
+  margin-left: 3%;
+  background: $redTranspa;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.cancel-order {
+  width: 153px;
+  height: 64px;
+  margin-left: 15%;
+  margin-top: 2%;
+  background: $red;
+  border: 1px solid $red;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.send-order {
+  width: 222px;
+  height: 64px;
+  margin-left: 15%;
+  margin-top: 2%;
+  background: $yellow;
+  border: 20px solid $yellow;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
 $layout-breakpoint-tablet: 400px;
 // aqui todo lo modificado afecta la vista tablet
 @media (min-width: $layout-breakpoint-tablet) {
-  .chooseOptionHome {
-    margin-top: 10%;
-    margin-left: 38%;
-  }
-
   .options-button {
     margin-left: 4%;
     margin-top: 4%;
