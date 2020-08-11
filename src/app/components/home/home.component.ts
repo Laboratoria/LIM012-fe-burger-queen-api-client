@@ -13,7 +13,6 @@ import { ProductsService } from '../../services/products/products.service';
 
 export class HomeComponent implements OnInit {
   public products: any;
-  public breakfast: any;
   logoPadre = 'mensaje desde el padre';
   padreNavbar = 'soy un header';
   padreDate = 'Date&HOurs';
@@ -22,13 +21,10 @@ export class HomeComponent implements OnInit {
   constructor(
     private productsService: ProductsService,
     private router: Router
-
   )
   {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
 getProducts(typeSelect): void {
   this.productsService.getListProduct(this.products).subscribe(
@@ -36,10 +32,10 @@ getProducts(typeSelect): void {
       this.products = response;
       const breakfast = this.products.filter(products => products.type === typeSelect);
       this.products = breakfast;
-      console.log(breakfast);
     }
   );
   }
+
   // getProductsLunch(): void {
   //   this.productsService.getListProduct(this.products).subscribe(
   //     response => {

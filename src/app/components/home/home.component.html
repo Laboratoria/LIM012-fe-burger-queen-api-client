@@ -18,10 +18,12 @@
       <p class="menu">MENU</p>
 
       <table class="table-products">
+        <th> Nro</th>
         <th> PRODUCTOS</th>
         <th> PRECIOS</th>
     
-        <tr *ngFor= "let product of products"> 
+        <tr *ngFor= "let product of products; index as i"> 
+          <th scope="row">{{i+1}}</th>
             <td class="product-name">{{product.name}}</td>
             <td class="product-price"> S/{{product.price}}</td>
             <img src="../../../assets/menu/{{product.image}}" width="50px"alt="{{product.image}}" class="product-image">
@@ -34,7 +36,6 @@
     <article class="yellow-section-right">
 
       <p class="client-info-select">CLIENTE</p>
-      
       <div class="product-resume-total">
         PRODUCTO CANT PRECIO
         <p class="total-amount">TOTAL</p>
