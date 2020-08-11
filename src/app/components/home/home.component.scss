@@ -44,8 +44,13 @@ border-radius: 30px 0px 0px 30px;
 }
 
 .menu{
-  margin-top: 2%;
-  margin-left: 43%;
+  display: flex;
+  width: 107px;
+  height: 54px;
+  left: 55%;
+  top: 214%;
+  margin-top: 8%;
+  margin-left: 40%;
   font-family: 'Bangers';
   font-style: normal;
   font-weight: normal;
@@ -119,6 +124,7 @@ border-radius: 30px 0px 0px 30px;
 $layout-breakpoint-tablet: 400px;
 // aqui todo lo modificado afecta la vista tablet
 @media (min-width: $layout-breakpoint-tablet) {
+  
   .options-button {
     margin-left: 4%;
     margin-top: 4%;
@@ -129,5 +135,14 @@ $layout-breakpoint-tablet: 400px;
     display: flex;
     flex-direction: row;
   }
+  .product-name{
+    padding-left: 15%;
+    font-size: x-large;
+  }
+  .product-price{
+    padding-left: 1%;
+  }
+  
+  
 }
 
