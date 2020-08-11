@@ -13,11 +13,8 @@ const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'lunch', component: LunchComponent },
-  {path: 'home/lunch', component: LunchComponent },
-
-  {path: 'home/lunch/orders', component: OrdersComponent },
-  {path: 'home/orders', component: OrdersComponent },
+//  {path: 'lunch', component: LunchComponent },
+  {path: 'orders', component: OrdersComponent },
   {path: '**', component: Page404Component },
 ];
 

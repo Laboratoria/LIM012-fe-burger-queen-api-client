@@ -30,25 +30,25 @@ export class HomeComponent implements OnInit {
 
   }
 
-getProducts(): void {
+getProducts(typeSelect): void {
   this.productsService.getListProduct(this.products).subscribe(
     response => {
       this.products = response;
-      const breakfast = this.products.filter(products => products.type === 'breakfast');
+      const breakfast = this.products.filter(products => products.type === typeSelect);
       this.products = breakfast;
       console.log(breakfast);
     }
   );
   }
-  getProductsLunch(): void {
-    this.productsService.getListProduct(this.products).subscribe(
-      response => {
-        this.products = response;
-        const lunch = this.products.filter(products => products.type === 'lunch');
-        this.products = lunch;
-        this.router.navigate(['/lunch']);
-        console.log(lunch);
-      }
-    );
-    }
+  // getProductsLunch(): void {
+  //   this.productsService.getListProduct(this.products).subscribe(
+  //     response => {
+  //       this.products = response;
+  //       const lunch = this.products.filter(products => products.type === 'lunch');
+  //       this.products = lunch;
+  //       this.router.navigate(['/lunch']);
+  //       console.log(lunch);
+  //     }
+  //   );
+  //   }
 }
