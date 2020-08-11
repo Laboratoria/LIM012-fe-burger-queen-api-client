@@ -19,6 +19,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { MilogoComponent } from './components/milogo/milogo.component';
 import { FoodOrdersComponent } from './components/food-orders/food-orders.component';
 import { DateComponent } from './components/date/date.component';
+import { BillOrdersComponent } from './components/bill-orders/bill-orders.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DateComponent } from './components/date/date.component';
     OrdersComponent,
     MilogoComponent,
     FoodOrdersComponent,
-    DateComponent
+    DateComponent,
+    BillOrdersComponent
   ],
   imports: [
     BrowserModule,
