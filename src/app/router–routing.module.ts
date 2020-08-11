@@ -10,12 +10,10 @@ import { RegisterComponent } from './components/user/register/register.component
 import { OrdersComponent } from './components/orders/orders.component';
 
 const appRoutes: Routes = [
-  {path: '', component: LoginComponent },
-  {path: 'login', component: LoginComponent },
-  {path: 'home', component: HomeComponent },
-
-  {path: 'lunch', component: LunchComponent },
-
+  {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent},
+//  {path: 'lunch', component: LunchComponent },
   {path: 'orders', component: OrdersComponent },
   {path: '**', component: Page404Component },
 ];
