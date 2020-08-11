@@ -13,6 +13,7 @@ import { ProductsService } from '../../services/products/products.service';
 
 export class HomeComponent implements OnInit {
   public products: any;
+  public breakfast: any;
   logoPadre = 'mensaje desde el padre';
   padreNavbar = 'soy un header';
   padreDate = 'Date&HOurs';
@@ -33,8 +34,21 @@ getProducts(): void {
   this.productsService.getListProduct(this.products).subscribe(
     response => {
       this.products = response;
-      console.log(this.products);
+      const breakfast = this.products.filter(products => products.type === 'breakfast');
+      this.products = breakfast;
+      console.log(breakfast);
     }
   );
   }
+  getProductsLunch(): void {
+    this.productsService.getListProduct(this.products).subscribe(
+      response => {
+        this.products = response;
+        const lunch = this.products.filter(products => products.type === 'lunch');
+        this.products = lunch;
+        this.router.navigate(['/lunch']);
+        console.log(lunch);
+      }
+    );
+    }
 }
