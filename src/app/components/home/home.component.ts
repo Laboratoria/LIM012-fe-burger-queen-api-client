@@ -37,4 +37,12 @@ getProducts(): void {
     }
   );
   }
+
+getLunch(): void {
+  this.router.navigate(['/lunch']);
+}
+
+getOrders(): void {
+  this.router.navigate(['/orders']);
+}
 }
