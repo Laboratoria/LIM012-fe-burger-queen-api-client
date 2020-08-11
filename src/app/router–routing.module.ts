@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 // components
 import { LoginComponent } from './components/user/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { LunchComponent } from './components/lunch/lunch.component';
 import { Page404Component } from './components/page404/page404.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -13,8 +12,7 @@ const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-//  {path: 'lunch', component: LunchComponent },
-  {path: 'orders', component: OrdersComponent },
+  {path: 'home/orders', component: OrdersComponent },
   {path: '**', component: Page404Component },
 ];
 

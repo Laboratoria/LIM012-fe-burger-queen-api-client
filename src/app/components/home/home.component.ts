@@ -13,7 +13,6 @@ import { ProductsService } from '../../services/products/products.service';
 
 export class HomeComponent implements OnInit {
   public products: any;
-  public breakfast: any;
   logoPadre = 'mensaje desde el padre';
   padreNavbar = 'soy un header';
   padreDate = 'Date&HOurs';

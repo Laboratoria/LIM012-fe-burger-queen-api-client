@@ -19,7 +19,6 @@ import { Page404Component } from './components/page404/page404.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { MilogoComponent } from './components/milogo/milogo.component';
 import { FoodOrdersComponent } from './components/food-orders/food-orders.component';
-import { LunchComponent } from './components/lunch/lunch.component';
 import { DateComponent } from './components/date/date.component';
 
 @NgModule({
@@ -34,7 +33,6 @@ import { DateComponent } from './components/date/date.component';
     OrdersComponent,
     MilogoComponent,
     FoodOrdersComponent,
-    LunchComponent,
     DateComponent
   ],
   imports: [
