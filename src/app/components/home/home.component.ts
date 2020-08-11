@@ -16,18 +16,16 @@ export class HomeComponent implements OnInit {
   logoPadre = 'mensaje desde el padre';
   padreNavbar = 'soy un header';
   padreDate = 'Date&HOurs';
+  padreBillOrders = 'mensaje desde el padre';
   @Input() hijoHome: any;
 
   constructor(
     private productsService: ProductsService,
     private router: Router
-
   )
   {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
 getProducts(typeSelect): void {
   this.productsService.getListProduct(this.products).subscribe(
@@ -35,10 +33,10 @@ getProducts(typeSelect): void {
       this.products = response;
       const breakfast = this.products.filter(products => products.type === typeSelect);
       this.products = breakfast;
-      console.log(breakfast);
     }
   );
   }
+
   // getProductsLunch(): void {
   //   this.productsService.getListProduct(this.products).subscribe(
   //     response => {

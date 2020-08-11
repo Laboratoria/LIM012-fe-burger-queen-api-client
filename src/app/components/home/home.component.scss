@@ -59,68 +59,6 @@ border-radius: 30px 0px 0px 30px;
   
 }
 
-.yellow-section-right {
-  margin-right: 1%;
-  width: 49vw;
-  height: 65vh;
-  background: $yellowTranspa;  
-  box-sizing: border-box;
-  border-radius: 0px 30px 30px 0px;
-}
-
-.client-info-select {
-  width: 43vw;
-  height: 10%;
-  margin-left: 5%;
-  margin-top: 5%;
-  background: $grayTranspa;
-  box-sizing: border-box;
-  border-radius: 0px 30px 30px 0px;
-}
-
-.product-resume-total {  
-  width: 43vw;
-  height: 65%;
-  margin-left: 5%;
-  margin-top: 5%;
-  background: $grayTranspa;
-  box-sizing: border-box;
-  border-radius: 0px 30px 30px 0px;
-}
-
-.total-amount {
-  position: absolute;
-  bottom:17%;
-  width: 35%;
-  height: 7%;
-  margin-left: 3%;
-  background: $redTranspa;
-  border-radius: 0px 30px 30px 0px;
-}
-
-.cancel-order {
-  width: 153px;
-  height: 64px;
-  margin-left: 15%;
-  margin-top: 2%;
-  background: $red;
-  border: 1px solid $red;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-}
-
-.send-order {
-  width: 222px;
-  height: 64px;
-  margin-left: 15%;
-  margin-top: 2%;
-  background: $yellow;
-  border: 20px solid $yellow;
-  box-sizing: border-box;
-  border-radius: 30px;
-}
-
 $layout-breakpoint-tablet: 400px;
 // aqui todo lo modificado afecta la vista tablet
 @media (min-width: $layout-breakpoint-tablet) {

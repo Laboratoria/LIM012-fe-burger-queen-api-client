@@ -8,11 +8,11 @@
       <button class= "options-button" (click)="getProducts('lunch')">Almuerzo</button >
       <button class= "options-button"  routerLink="orders">Pedidos</button >
     </article>
-  
-  <div class="breakfast-section-container">
+
+
+  <div class="breakfast-section-container">    
     <article class="yellow-section-left">
       <p class="menu">MENU</p>
-
       <table class="table-products">
         <th> PRODUCTOS</th>
         <th> PRECIOS</th>
@@ -32,6 +32,7 @@
      <article class="yellow-section-right">
       <p class="client-info-select"></p>
     </article>
+    <app-bill-orders [hijoBillOrders]="padreBillOrders"></app-bill-orders>
   </div>
 
 
