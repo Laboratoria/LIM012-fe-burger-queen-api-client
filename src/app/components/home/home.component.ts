@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   public products: any;
   logoPadre = 'mensaje desde el padre';
   padreNavbar = 'soy un header';
+  padreDate = 'Date&HOurs';
+  @Input() hijoHome: any;
 
   constructor(
     private productsService: ProductsService,

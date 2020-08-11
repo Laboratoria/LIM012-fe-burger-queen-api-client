@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LunchComponent implements OnInit {
   navbarPadre = 'mensaje desde el padre';
+  homePadre = 'Lunch';
   constructor() { }
 
   ngOnInit(): void {

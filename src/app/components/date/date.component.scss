@@ -1,0 +1,16 @@
+$plomo: #494747;
+
+.date{
+   margin-left: 67%;
+   font-size: small;
+   color: $plomo;
+
+} 
+
+$layout-breakpoint-tablet: 400px;
+// aqui todo lo modificado afecta la vista tablet
+@media (min-width: $layout-breakpoint-tablet){
+    .date{
+        font-size: x-large;
+    }
+}
