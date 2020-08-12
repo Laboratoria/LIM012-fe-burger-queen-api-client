@@ -33,32 +33,6 @@ $grayTranspa: rgba(227, 222, 213, 0.5);
   flex-direction: row;
 }
 
-.yellow-section-left {
-width: 49vw;
-height: 65vh;
-margin-left: 1%;
-margin-right: 0.5%;
-background: $yellowTranspa;
-box-sizing: border-box;
-border-radius: 30px 0px 0px 30px;
-}
-
-.menu{
-  display: flex;
-  width: 107px;
-  height: 54px;
-  left: 55%;
-  top: 214%;
-  margin-top: 8%;
-  margin-left: 40%;
-  font-family: 'Bangers';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 300%;
-  color: $red;
-  
-}
-
 $layout-breakpoint-tablet: 400px;
 // aqui todo lo modificado afecta la vista tablet
 @media (min-width: $layout-breakpoint-tablet) {
@@ -73,14 +47,5 @@ $layout-breakpoint-tablet: 400px;
     display: flex;
     flex-direction: row;
   }
-  .product-name{
-    padding-left: 15%;
-    font-size: x-large;
-  }
-  .product-price{
-    padding-left: 1%;
-  }
-  
-  
 }
 

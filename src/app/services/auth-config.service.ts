@@ -20,10 +20,6 @@ export class AuthConfigService {
     return this.http.post<any>(`${this.url}auth`, user);
   }
 
-  // tokenId(): string {
-  //   return sessionStorage.getItem('token');
-  // }
-
   setToken(token: string): void {
     return sessionStorage.setItem('token', token);
   }
@@ -37,5 +33,9 @@ export class AuthConfigService {
   getUserLogged(): void {
     const token = this.getToken();
     // Aquí iría el endpoint para devolver el usuario para un token
+  }
+
+  logout(): void {
+    sessionStorage.removeItem('currentUser');
   }
 }

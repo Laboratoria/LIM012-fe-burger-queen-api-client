@@ -8,7 +8,7 @@ $gray: #E3DED5;
 $grayTranspa: rgba(227, 222, 213, 0.5);
 
 .yellow-section-right {
-  margin-right: 1%;
+  margin-left: 2%;
   width: 49vw;
   height: 65vh;
   background: $yellowTranspa;  
@@ -16,15 +16,17 @@ $grayTranspa: rgba(227, 222, 213, 0.5);
   border-radius: 0px 30px 30px 0px;
 }
 
-.client-info-select {
+.client-name-container {
   width: 43vw;
   height: 10%;
   margin-left: 5%;
-  padding-top: 5%;
-  margin-top: 0;
   background: $grayTranspa;
   box-sizing: border-box;
   border-radius: 0px 30px 30px 0px;
+}
+
+.client-info-select {
+padding: 2%;
 }
 
 .product-resume-total {  
