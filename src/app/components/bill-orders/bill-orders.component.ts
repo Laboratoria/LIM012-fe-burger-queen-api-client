@@ -1,4 +1,6 @@
+import { CounterProductsService } from './../../services/counter-products/counter-products.service';
 import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-bill-orders',
@@ -8,7 +10,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BillOrdersComponent implements OnInit {
   // etiqueta Input en el componente hijo
   @Input() hijoBillOrders: any;
-  constructor() { }
+  counter: number;
+
+  constructor(private counterProductService: CounterProductsService) {
+    this.counterProductService.currentNumber.subscribe(numb => {
+      this.counter = numb;
+    });
+   }
 
   ngOnInit(): void {
   }

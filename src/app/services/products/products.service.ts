@@ -1,17 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
   public url: string;
+  // public products: any = [];
 
   constructor(private http: HttpClient) {
     this.url = environment.apiUrl;
   }
+
+  // private listProducts = new BehaviorSubject<Array<any>>([]);
+  // public currentListProducts = this.listProducts.asObservable();
+
+  // addListProducts(order) {
+  //   const indexProduct = this.products.findIndex(product => product.name === order.name);
+
+  //   if (indexProduct < 0 ) {
+  //     const newOrder = {...order, quantity: 1};
+  //     this.products.push(newOrder);
+  //   } else {
+  //     this.products[indexProduct].quantity += 1;
+  //   }
+
+  //   this.listProducts.next(this.products);
+  // }
+
   getListProduct(products: any): Observable<any> {
     return this.http.get<any>(`${this.url}products`, products);
   }
