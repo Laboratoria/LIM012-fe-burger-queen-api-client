@@ -17,7 +17,6 @@
     <tr *ngFor= "let product of products; index as i">
       <!-- <div *ngIf="typeProduct===product.type">
         <div (click)= "sendOrder(product)"> -->
-          <th class="product-number" scope="row">{{i+1}}</th>
           <td class="product-name">{{product.name}}</td>
           <td class="product-price"> S/{{product.price}}</td>
           <img src="../../../assets/menu/{{product.image}}" width="50px"alt="{{product.image}}" class="product-image">
