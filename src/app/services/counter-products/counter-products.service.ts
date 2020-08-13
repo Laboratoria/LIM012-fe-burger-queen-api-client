@@ -23,24 +23,56 @@ export class CounterProductsService {
 
   public changeCart(newData: Item): void {
     let listCart = this.cart.getValue();
-    if (listCart) {
-      const objIndex = listCart.findIndex((obj => obj.id === newData.id));
+    console.log(newData);
+    
+    const objCant: Item = {
+      _id: newData._id,
+      dateEntry: newData.dateEntry,
+      image: newData.image,
+      name: newData.name,
+      price: newData.price,
+      type: newData.type,
+      quantity: 1
+  };
+    if (listCart.length !== 0) {
+      const objIndex = listCart.findIndex((obj => obj._id === newData._id));
       if (objIndex !== -1)
       {
-        listCart[objIndex].quantity += 1;
+            const newArrOrder = listCart.map(product => {
+              if (product._id === objCant._id) {
+                objCant.quantity = product.quantity + 1;
+                return objCant;
+              } else {
+                return product;
+              }
+            })
+            console.log(newArrOrder);
+            this.cart.next(newArrOrder);
+      //   // objCant.quantity + 1;
+      //   objCant.quantity = listCart[objIndex].quantity + 1;
+      //   console.log(objCant);
+        
       } else {
-        listCart.push(newData);
+        
+        let newProductInOlderList = listCart.concat(objCant);
+        this.cart.next(newProductInOlderList);
+        console.log(this.cart);
+        
+        // listCart.push(newData);
       }
+
     } else {
-      listCart = [];
-      listCart.push(newData);
+      // listCart = [];
+      let firstNewArr = listCart.concat(objCant);
+      this.cart.next(firstNewArr);
+      // listCart.concat(objCant);
     }
-    this.cart.next(listCart);
+    // this.cart.next(listCart);
   }
 
   public removeElementCart(newData: Item): void{
     let listCart = this.cart.getValue();
-    let objIndex = listCart.findIndex((obj => obj.id === newData.id));
+    let objIndex = listCart.findIndex((obj => obj._id === newData._id));
     if (objIndex !== -1) {
       listCart[objIndex].quantity = 1;
       listCart.splice(objIndex,1);
