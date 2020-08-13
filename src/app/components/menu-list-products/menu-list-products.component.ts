@@ -1,5 +1,6 @@
 import { CounterProductsService } from './../../services/counter-products/counter-products.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { Item } from '../../interfaces/item';
 import { ProductsService } from '../../services/products/products.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { ProductsService } from '../../services/products/products.service';
   providers: [ProductsService],
 })
 export class MenuListProductsComponent implements OnInit {
+  public listProducts: Array<Item> = [];
   public products: any;
   // public orders: any;
   // @Input() typeProduct: string;
@@ -37,12 +39,16 @@ export class MenuListProductsComponent implements OnInit {
     );
     }
 
-    sum(): void {
+    sum(id): void {
       const newNumber = this.counter + 1;
       this.counterProductsService.changeNumber(newNumber);
     }
 
-    rest(): void {
+    public addCart(product: Item): void {
+      this.counterProductsService.changeCart(product);
+  }
+
+    rest(id): void {
       const newNumber = this.counter - 1;
       this.counterProductsService.changeNumber(newNumber);
     }
