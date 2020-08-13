@@ -7,8 +7,28 @@
       <p>
         {{ counter }}
       </p>
+      
+        <table class="table-products">
+          <tr>
+            <th> PRODUCTOS </th>
+            <th> CANTIDAD </th>
+            <th> PRECIOS </th>
 
-      <p class="total-amount">TOTAL</p>
+          </tr>
+          <tr *ngFor= "let item of items">
+            <!-- <div *ngIf="typeProduct===product.type">
+              <div (click)= "sendOrder(product)"> -->
+                <td class="product-name">{{item.name}}</td>
+                <td> {{item.quantity}}</td>
+                <td class="product-price"> S/{{item.price}}</td>
+                <td> <button type="button" (click)="remove(item)">Remove</button></td>
+                <!-- </div>
+      </div> -->
+      </tr>
+        </table>
+      
+      <p>cantidad total: {{totalQuantity}}</p>
+      <p class="total-amount">Precio total: {{totalPrice}}</p>
     </div>
 
     <button class="cancel-order">CANCELAR</button>

@@ -3,6 +3,7 @@ import { AuthConfigService } from '../../../services/auth-config.service';
 import { Router } from '@angular/router';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

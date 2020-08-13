@@ -21,7 +21,7 @@
           <td class="product-name">{{product.name}}</td>
           <td class="product-price"> S/{{product.price}}</td>
           <img src="../../../assets/menu/{{product.image}}" width="50px"alt="{{product.image}}" class="product-image">
-          <td><button (click)="rest()">-</button>{{counter}}<button (click)="sum()">+</button></td>
+          <td><button (click)="rest(product)">-</button>{{counter}}<button (click)="sum(product)">+</button> <button type="button" (click)="addCart(product)">Añadir al carrito</button></td>
           <!-- </div>
 </div> -->
 </tr>
