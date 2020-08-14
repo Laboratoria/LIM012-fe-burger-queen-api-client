@@ -14,13 +14,13 @@ export class BillOrdersComponent implements OnInit {
   // etiqueta Input en el componente hijo
   @Input() hijoBillOrders: any;
   counter: any;
-  client: string = 'Client Name';
+  client: string;
   public items: Array<Item>;
   public totalPrice: number;
   // public totalQuantity: number;
 
   constructor(private counterProductService: CounterProductsService) {
-    this.counterProductService.currentDataCart.subscribe(item => this.counter = item);
+    // this.counterProductService.currentDataCart.subscribe(item => this.counter = item);
 
     // this.counterProductService.currentNumber.subscribe(numb => {
     //   this.counter = numb;

@@ -1,6 +1,6 @@
 <article class="yellow-section-right">
   <div class="client-name-container">
-    <input class="client-info-select" [(ngModel)]="client">
+    <input class="client-info-select" placeholder="Client Name" [(ngModel)]="client">
     <span>{{ client }}</span>
   </div>
 
@@ -20,7 +20,9 @@
             <!-- <div *ngIf="typeProduct===product.type">
               <div (click)= "sendOrder(product)"> -->
                 <td class="product-name">{{item.name}}</td>
-                <td><input type="number" value="" [(ngModel)]=item.quantity></td>
+                <td><input type="number" [(ngModel)]=item.quantity>
+                   <!-- {{ item.quantity }} -->
+                  </td>
                 <td class="product-price"> S/{{item.price}}</td>
                 <td> <button type="button" (click)="remove(item)">Remove</button></td>
                 <!-- </div>
@@ -29,7 +31,7 @@
         </table>
       
       <!-- <p>cantidad total de cada tipo de producto: {{totalQuantity}}</p> -->
-      <p class="total-amount">Precio total: {{totalPrice}}</p>
+      <p class="total-amount">Precio total: S/.{{totalPrice}}</p>
     </div>
 
     <button class="cancel-order">CANCELAR</button>
