@@ -21,21 +21,20 @@ export class CounterProductsService {
     this.url = environment.apiUrl;
   }
 
-  public changeCart(newData: Item): void {
+  public changeCart(NewProduct: Item): void {
     let listCart = this.cart.getValue();
-    console.log(newData);
-    
+    console.log(NewProduct);
     const objCant: Item = {
-      _id: newData._id,
-      dateEntry: newData.dateEntry,
-      image: newData.image,
-      name: newData.name,
-      price: newData.price,
-      type: newData.type,
+      _id: NewProduct._id,
+      dateEntry: NewProduct.dateEntry,
+      image: NewProduct.image,
+      name: NewProduct.name,
+      price: NewProduct.price,
+      type: NewProduct.type,
       quantity: 1
   };
     if (listCart.length !== 0) {
-      const objIndex = listCart.findIndex((obj => obj._id === newData._id));
+      const objIndex = listCart.findIndex((obj => obj._id === NewProduct._id));
       if (objIndex !== -1)
       {
             const newArrOrder = listCart.map(product => {
@@ -51,31 +50,28 @@ export class CounterProductsService {
       //   // objCant.quantity + 1;
       //   objCant.quantity = listCart[objIndex].quantity + 1;
       //   console.log(objCant);
-        
       } else {
-        
         let newProductInOlderList = listCart.concat(objCant);
         this.cart.next(newProductInOlderList);
         console.log(this.cart);
-        
-        // listCart.push(newData);
+        // listCart.push(NewProduct);
       }
 
     } else {
       // listCart = [];
-      let firstNewArr = listCart.concat(objCant);
+      const firstNewArr = listCart.concat(objCant);
       this.cart.next(firstNewArr);
       // listCart.concat(objCant);
     }
     // this.cart.next(listCart);
   }
 
-  public removeElementCart(newData: Item): void{
-    let listCart = this.cart.getValue();
-    let objIndex = listCart.findIndex((obj => obj._id === newData._id));
+  public removeElementCart(NewProduct: Item): void{
+    const listCart = this.cart.getValue();
+    const objIndex = listCart.findIndex((obj => obj._id === NewProduct._id));
     if (objIndex !== -1) {
       listCart[objIndex].quantity = 1;
-      listCart.splice(objIndex,1);
+      listCart.splice(objIndex, 1 );
     }
     this.cart.next(listCart);
   }
