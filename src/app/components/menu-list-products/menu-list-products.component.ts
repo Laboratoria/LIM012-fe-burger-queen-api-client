@@ -10,7 +10,7 @@ import { ProductsService } from '../../services/products/products.service';
   providers: [ProductsService],
 })
 export class MenuListProductsComponent implements OnInit {
-  public listProducts: Array<Item> = [];
+  // public listProducts: Array<Item> = [];
   public products: any;
   // public orders: any;
   // @Input() typeProduct: string;
@@ -39,19 +39,23 @@ export class MenuListProductsComponent implements OnInit {
     );
     }
 
-    sum(id): void {
-      const newNumber = this.counter + 1;
-      this.counterProductsService.changeNumber(newNumber);
-    }
+    // sum(id): void {
+    //   const newNumber = this.counter + 1;
+    //   this.counterProductsService.changeNumber(newNumber);
+    // }
 
     public addCart(product: Item): void {
       this.counterProductsService.changeCart(product);
   }
 
-    rest(id): void {
-      const newNumber = this.counter - 1;
-      this.counterProductsService.changeNumber(newNumber);
-    }
+  // public rest(product: Item): number {
+  //     if ( this.counter > 0 ){
+  //     const newNumber = this.counter - 1;
+  //     this.counterProductsService.changeNumber(newNumber);
+  //   } else {
+  //     return this.counter = 0;
+  //   }
+  // }
   // sendOrder(product) {
   //   this.productsService.addListProducts(product);
   // }

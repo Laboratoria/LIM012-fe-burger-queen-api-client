@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Item } from '../../interfaces/item';
 
 
+
 @Component({
   selector: 'app-bill-orders',
   templateUrl: './bill-orders.component.html',
@@ -12,34 +13,28 @@ import { Item } from '../../interfaces/item';
 export class BillOrdersComponent implements OnInit {
   // etiqueta Input en el componente hijo
   @Input() hijoBillOrders: any;
-  counter: number;
+  counter: any;
+  client: string;
   public items: Array<Item>;
   public totalPrice: number;
-  public totalQuantity: number;
+  // public totalQuantity: number;
 
   constructor(private counterProductService: CounterProductsService) {
-    this.counterProductService.currentNumber.subscribe(numb => {
-      this.counter = numb;
-    });
+    // this.counterProductService.currentDataCart.subscribe(item => this.counter = item);
+
+    // this.counterProductService.currentNumber.subscribe(numb => {
+    //   this.counter = numb;
+    // });
    }
 
   ngOnInit(): void {
-    this.counterProductService.currentDataCart$.subscribe(x => {
-      if (x)
-      {
-        this.items = x;
-        this.totalQuantity = x.length;
-
-        console.log(this.totalQuantity);
-        
-        
-        this.totalPrice = x.reduce((sum, current) => sum + (current.price * current.quantity), 0);
-
-        console.log(this.totalPrice);
-        
+    this.counterProductService.currentDataCart.subscribe(productInCar => {
+      if (productInCar) {
+        this.items = productInCar;
+        // this.totalQuantity = productInCar.length;
+        this.totalPrice = productInCar.reduce((sum, current) => sum + (current.price * current.quantity), 0);
       }
     });
-
   }
 
   public remove(product: Item): void {
