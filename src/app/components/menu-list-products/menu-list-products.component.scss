@@ -6,6 +6,8 @@ $red:  #E30D2C;
 $redTranspa: rgba(227, 13, 44, 0.5);
 $gray: #E3DED5;
 $grayTranspa: rgba(227, 222, 213, 0.5);
+$negro: #1A1919;
+$verde: #00C200;
 
 @mixin button($ancho, $alto) {
   width: $ancho;
@@ -66,17 +68,23 @@ $layout-breakpoint-tablet: 400px;
   display: flex;
   flex-direction: row;
 }
-
-.product-number {
+.table-products{
+  table-layout: fixed;
+  width: 85%;
   padding-left: 15%;
-}
-
-.product-name{
-  padding-left: 15%;
-  font-size: x-large;
 }
 .product-price{
-  padding-left: 1%;
+  text-align: center;
+}
+product-name{
+  font-size: x-large;
+}
+.add-product{
+  font-size: 30px; 
+  color:$verde;
+}
+.button-add-product{
+  background: none;
 }
 }
 

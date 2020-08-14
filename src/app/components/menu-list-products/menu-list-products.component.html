@@ -7,12 +7,9 @@
 <article class="yellow-section-left">
   <p class="menu">MENU</p>
   <table class="table-products">
-    <tr>
-      <th></th>
-      <th> PRODUCTOS </th>
-      <th> PRECIOS </th>
-      <th></th>
-      <th> CANTIDAD </th>
+    <tr class="">
+      <th class="title-products"> PRODUCTOS </th>
+      <th class="title-products"> PRECIOS </th>
     </tr>
     <tr *ngFor= "let product of products; index as i">
       <!-- <div *ngIf="typeProduct===product.type">
@@ -20,7 +17,11 @@
           <td class="product-name">{{product.name}}</td>
           <td class="product-price"> S/{{product.price}}</td>
           <img src="../../../assets/menu/{{product.image}}" width="50px"alt="{{product.image}}" class="product-image">
-          <td><button type="button" (click)="addCart(product)">Añadir</button></td>
+          <td>
+            <button class="button-add-product" type="button" (click)="addCart(product)">
+              <span class="iconify add-product" data-inline="false" data-icon="clarity:plus-circle-solid"></span>
+            </button>
+          </td>
           <!-- </div>
 </div> -->
 </tr>

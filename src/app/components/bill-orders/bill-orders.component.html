@@ -24,7 +24,12 @@
                    <!-- {{ item.quantity }} -->
                   </td>
                 <td class="product-price"> S/{{item.price}}</td>
-                <td> <button type="button" (click)="remove(item)">Remove</button></td>
+                <td>
+                  <button type="button" (click)="remove(item)"> 
+                    <span class="iconify delete" data-inline="false" data-icon="ic:baseline-delete"></span>
+                  </button>
+                </td>
+               
                 <!-- </div>
       </div> -->
       </tr>
