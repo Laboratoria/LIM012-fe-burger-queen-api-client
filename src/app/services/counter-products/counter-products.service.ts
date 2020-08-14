@@ -24,8 +24,11 @@ export class CounterProductsService {
     // this.url = environment.apiUrl;
   }
 
-// cuando seleccionas añadir: changeCart recibe el producto nuevo a añadir al carrito
-  public changeCart(newProduct: Item): void { // newProduct es el parametro
+  // cuando seleccionas añadir: changeCart recibe el producto nuevo a añadir al carrito
+  // Esta función se encarga de recibir el item que debemos agregar al carrito,
+  // nos fijamos si ya existe aumentamos su cantidad,
+  // sino lo agregamos y volvemos a enviar el valor a todos los observers
+  public changeCart(newProduct: Item): void {
     const listCart = this.cart.getValue(); // Obtenemos el valor actual
 
     const currentProductObj: Item = {
@@ -60,14 +63,17 @@ export class CounterProductsService {
     }
   }
 
+  // Con esta función removemos un elemento del carrito y volvemos a envíar la lista de esos elementos 
+  // para que se propague entre los observer
   public removeElementCart(newProduct: Item): void{
-    const listCart = this.cart.getValue();
-    const objIndex = listCart.findIndex((obj => obj._id === newProduct._id));
-    if (objIndex !== -1) {
-      listCart[objIndex].quantity = 1;
-      listCart.splice(objIndex, 1);
+    const listCart = this.cart.getValue(); // Obtenemos el valor actual de carrito
+    const objIndex = listCart.findIndex((obj => obj._id === newProduct._id)); // Buscamos el item del carrito para eliminar
+    if (objIndex !== -1) { // si existe ese producto en el cart podemos borrarlo
+      // si volvemos a agregarlo la cantidad no se reiniciará)
+      listCart[objIndex].quantity = 1; // configurar la cantidad en 1 (ya que los array se modifican los valores por referencia,
+      listCart.splice(objIndex, 1); // Eliminamos el item del array del carrito
     }
-    this.cart.next(listCart);
+    this.cart.next(listCart); // Enviamos el valor a todos los Observers que estan escuchando nuestro Observable
   }
 
 

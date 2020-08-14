@@ -1,12 +1,13 @@
 <article class="yellow-section-right">
   <div class="client-name-container">
-    <p class="client-info-select">CLIENTE</p>
+    <input class="client-info-select" [(ngModel)]="client">
+    <span>{{ client }}</span>
   </div>
 
     <div class="product-resume-total">
-      <p>
+      <!-- <p>
         {{ counter }}
-      </p>
+      </p> -->
       
         <table class="table-products">
           <tr>
@@ -19,7 +20,7 @@
             <!-- <div *ngIf="typeProduct===product.type">
               <div (click)= "sendOrder(product)"> -->
                 <td class="product-name">{{item.name}}</td>
-                <td> {{item.quantity}}</td>
+                <td><input type="number" value="" [(ngModel)]=item.quantity></td>
                 <td class="product-price"> S/{{item.price}}</td>
                 <td> <button type="button" (click)="remove(item)">Remove</button></td>
                 <!-- </div>

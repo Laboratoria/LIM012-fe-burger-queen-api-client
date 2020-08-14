@@ -49,10 +49,14 @@ export class MenuListProductsComponent implements OnInit {
       this.counterProductsService.changeCart(product);
   }
 
-    public rest(product: Item): void {
-      const newNumber = this.counter - 1;
-      this.counterProductsService.changeNumber(newNumber);
-    }
+  // public rest(product: Item): number {
+  //     if ( this.counter > 0 ){
+  //     const newNumber = this.counter - 1;
+  //     this.counterProductsService.changeNumber(newNumber);
+  //   } else {
+  //     return this.counter = 0;
+  //   }
+  // }
   // sendOrder(product) {
   //   this.productsService.addListProducts(product);
   // }

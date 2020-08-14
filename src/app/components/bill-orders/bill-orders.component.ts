@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Item } from '../../interfaces/item';
 
 
+
 @Component({
   selector: 'app-bill-orders',
   templateUrl: './bill-orders.component.html',
@@ -12,15 +13,18 @@ import { Item } from '../../interfaces/item';
 export class BillOrdersComponent implements OnInit {
   // etiqueta Input en el componente hijo
   @Input() hijoBillOrders: any;
-  counter: number;
+  counter: any;
+  client: string = 'Client Name';
   public items: Array<Item>;
   public totalPrice: number;
   // public totalQuantity: number;
 
   constructor(private counterProductService: CounterProductsService) {
-    this.counterProductService.currentNumber.subscribe(numb => {
-      this.counter = numb;
-    });
+    this.counterProductService.currentDataCart.subscribe(item => this.counter = item);
+
+    // this.counterProductService.currentNumber.subscribe(numb => {
+    //   this.counter = numb;
+    // });
    }
 
   ngOnInit(): void {
