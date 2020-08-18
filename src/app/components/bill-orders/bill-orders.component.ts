@@ -1,5 +1,5 @@
 import { CounterProductsService } from './../../services/counter-products/counter-products.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ɵConsole } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Item } from '../../interfaces/item';
 
@@ -17,6 +17,7 @@ export class BillOrdersComponent implements OnInit {
   client: string;
   public items: Array<Item>;
   public totalPrice: number;
+  public order: any;
   // public totalQuantity: number;
 
   constructor(private counterProductService: CounterProductsService) {
@@ -31,6 +32,7 @@ export class BillOrdersComponent implements OnInit {
     this.counterProductService.currentDataCart.subscribe(productInCar => {
       if (productInCar) {
         this.items = productInCar;
+
         // this.totalQuantity = productInCar.length;
         this.totalPrice = productInCar.reduce((sum, current) => sum + (current.price * current.quantity), 0);
       }
@@ -39,5 +41,13 @@ export class BillOrdersComponent implements OnInit {
 
   public remove(product: Item): void {
     this.counterProductService.removeElementCart(product);
+  }
+
+  sendOrder(): void {
+  this.order = [{
+    client: this.client,
+    products: this.items,
+  }];
+  console.log(this.order);
   }
 }

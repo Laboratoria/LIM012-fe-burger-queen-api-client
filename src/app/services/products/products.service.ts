@@ -29,6 +29,9 @@ export class ProductsService {
 
   //   this.listProducts.next(this.products);
   // }
+  sendOrder(order: any): Observable<any> {
+    return this.http.post<any>(`localhost:3000/orders`, order);
+  }
 
   getListProduct(products: any): Observable<any> {
     return this.http.get<any>(`${this.url}products`, products);

@@ -9,6 +9,7 @@ $grayTranspa: rgba(227, 222, 213, 0.5);
 $negro: #1A1919;
 
 .yellow-section-right {
+  margin-top: 13%;
   margin-left: 2%;
   width: 49vw;
   height: 65vh;
@@ -51,10 +52,10 @@ padding: 2%;
 }
 
 .total-amount {
-  position: absolute;
   bottom:17%;
   width: 35%;
   height: 7%;
+  margin-top: 75%;
   margin-left: 3%;
   background: $redTranspa;
   border-radius: 0px 30px 30px 0px;
