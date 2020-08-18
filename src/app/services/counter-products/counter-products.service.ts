@@ -37,7 +37,6 @@ export class CounterProductsService {
       price: newProduct.price,
       image: newProduct.image,
       type: newProduct.type,
-      dateEntry: newProduct.dateEntry,
       quantity: 1
   };
 

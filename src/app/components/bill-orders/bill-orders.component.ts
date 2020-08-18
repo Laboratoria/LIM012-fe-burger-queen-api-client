@@ -1,4 +1,5 @@
 import { CounterProductsService } from './../../services/counter-products/counter-products.service';
+import { ProductsService } from './../../services/products/products.service';
 import { Component, OnInit, Input, ɵConsole } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Item } from '../../interfaces/item';
@@ -18,9 +19,14 @@ export class BillOrdersComponent implements OnInit {
   public items: Array<Item>;
   public totalPrice: number;
   public order: any;
+  public status: string = 'pending';
+  public dateEntry: number = Date.now();
   // public totalQuantity: number;
 
-  constructor(private counterProductService: CounterProductsService) {
+  constructor(
+    private counterProductService: CounterProductsService,
+    private productsService: ProductsService
+    ) {
     // this.counterProductService.currentDataCart.subscribe(item => this.counter = item);
 
     // this.counterProductService.currentNumber.subscribe(numb => {
@@ -43,11 +49,14 @@ export class BillOrdersComponent implements OnInit {
     this.counterProductService.removeElementCart(product);
   }
 
-  sendOrder(): void {
-  this.order = [{
-    client: this.client,
-    products: this.items,
-  }];
-  console.log(this.order);
+  sendOrder(items): void {
+    this.order = [{
+      client: this.client,
+      products: this.items,
+      status: this.status,
+      dateEntry: this.dateEntry
+    }];
+    console.log(this.order);
+    this.productsService.sendOrder(this.order);
   }
 }

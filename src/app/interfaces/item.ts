@@ -4,7 +4,6 @@ export class Item {
     price: number;
     image: string;
     type: string;
-    dateEntry: Date;
     quantity: number;
 }
 
