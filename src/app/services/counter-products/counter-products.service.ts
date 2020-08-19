@@ -48,8 +48,8 @@ export class CounterProductsService {
             currentProductObj.quantity = productObj.quantity + 1; // Si ya cargamos uno aumentamos su cantidad
             return currentProductObj; // retornar nueva cant de producto ya existente
           } else {
-            return productObj; // los productos existentes que no variaron cantidad (se mantienen igual)
-          }
+              return productObj; // los productos existentes que no variaron cantidad (se mantienen igual)
+            }
         });
         this.cart.next(newArrOrder); // Enviamos el array con la cant modificada a todos los Observers
       } else { // añadir nuevo producto a un carrito lleno
@@ -62,7 +62,7 @@ export class CounterProductsService {
     }
   }
 
-  // Con esta función removemos un elemento del carrito y volvemos a envíar la lista de esos elementos 
+  // Con esta función removemos un elemento del carrito y volvemos a envíar la lista de esos elementos
   // para que se propague entre los observer
   public removeElementCart(newProduct: Item): void{
     const listCart = this.cart.getValue(); // Obtenemos el valor actual de carrito
@@ -75,6 +75,26 @@ export class CounterProductsService {
     this.cart.next(listCart); // Enviamos el valor a todos los Observers que estan escuchando nuestro Observable
   }
 
+// public changeQuantity(newProduct: Item): void{
+//   const listCart = this.cart.getValue(); // Obtenemos el valor actual
+
+//   const currentProductObj: Item = {
+//     _id: newProduct._id,
+//     name: newProduct.name,
+//     price: newProduct.price,
+//     image: newProduct.image,
+//     type: newProduct.type,
+//     quantity: 1
+// };
+//   if (listCart.length !== 0) {
+//   const objIndex = listCart.findIndex((obj => obj._id === newProduct._id)); // Buscamos si ya cargamos ese item en el carrito
+//   if (objIndex !== -1) { // devuelve el indice si el producto ya esta en el array listCart
+//     const newArrOrder = listCart.map(productObj => {
+//   if (productObj._id === currentProductObj._id) {
+//     currentProductObj.quantity = productObj.quantity - 1;
+//     }
+// });
+//   }}}
 
   changeNumber(value): void {
     this.numberSource.next(value);
