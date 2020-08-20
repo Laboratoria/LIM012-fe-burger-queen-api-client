@@ -1,13 +1,16 @@
 import { TestBed } from '@angular/core/testing';
-
-import { ConfigControllerAuthService } from './config-controller-auth.service';
+import { HttpClientTestingModule} from '@angular/common/http/testing';
+import { ConfigcontrollerAuthService } from './config-controller-auth.service';
 
 describe('ConfigControllerAuthService', () => {
-  let service: ConfigControllerAuthService;
+  let service: ConfigcontrollerAuthService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ConfigControllerAuthService);
+    TestBed.configureTestingModule({
+      providers: [ConfigcontrollerAuthService],
+      imports: [HttpClientTestingModule],
+    });
+    service = TestBed.inject(ConfigcontrollerAuthService);
   });
 
   it('should be created', () => {

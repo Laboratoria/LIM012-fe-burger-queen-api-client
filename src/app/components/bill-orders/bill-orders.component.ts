@@ -80,7 +80,7 @@ export class BillOrdersComponent implements OnInit {
 
     this.order = [{
       client: this.client,
-      products: items.map(prod => prod._id),
+      products: items.map(prod => prod.quantity),
       // products: obj.items
       // .map(item => {
       //   this.qty = item.quantity,
