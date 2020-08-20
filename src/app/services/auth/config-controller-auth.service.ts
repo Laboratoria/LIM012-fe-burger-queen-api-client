@@ -11,11 +11,11 @@ export class ConfigcontrollerAuthService implements HttpInterceptor {
   constructor(private authConfigService: AuthConfigService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const idToken = sessionStorage.getItem('currentUser');
+    const idToken = sessionStorage.getItem('token');
 
     if (idToken) {
       const clones = req.clone({
-        headers: req.headers.set('Authorization', `Bearer ${sessionStorage.currentUser}`)
+        headers: req.headers.set('Authorization', `Bearer ${idToken}`)
       });
       return next.handle(clones);
     }

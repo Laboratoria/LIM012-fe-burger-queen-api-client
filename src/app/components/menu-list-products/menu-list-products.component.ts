@@ -30,7 +30,7 @@ export class MenuListProductsComponent implements OnInit {
   }
 
   getProducts(typeSelect): void {
-    this.productsService.getListProduct(this.products).subscribe(
+    this.productsService.getListProduct().subscribe(
       response => {
         this.products = response;
         const breakfast = this.products.filter(products => products.type === typeSelect);

@@ -30,14 +30,14 @@ export class ProductsService {
 
   //   this.listProducts.next(this.products);
   // }
-  sendOrder(order: any){
-    this.http.post("http://localhost:3000/orders", order).subscribe(data => {
+  sendOrder(order: any): void{
+    this.http.post('http://localhost:3000/orders', order).subscribe(data => {
       console.log(data);
     });
   }
 
-  getListProduct(products: any): Observable<any> {
-    return this.http.get<any>(`${this.url}products`, products);
+  getListProduct(): Observable<any> {
+    return this.http.get<any>(`${this.url}products`);
   }
 }
 
