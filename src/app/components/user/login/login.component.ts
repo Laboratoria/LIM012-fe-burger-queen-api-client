@@ -12,7 +12,10 @@ import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 export class LoginComponent implements OnInit {
   public email: string;
   public password: string;
-  public user: any;
+  public user: {
+    email: string,
+    password: string
+  };
   public isError = false;
 
   constructor(
@@ -23,7 +26,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(): void {
+  login(): string {
+    let userLogged = 'invalid_form';
     this.user = { email: this.email || '', password: this.password || '' };
     sessionStorage.setItem('emailCurrentUser', this.email);
     console.log(this.user);
@@ -34,12 +38,15 @@ export class LoginComponent implements OnInit {
         console.log(data);
         // sessionStorage.setItem('token', data.token);
         this.authConfigService.setToken(data.token);
+        userLogged = 'login_valid';
         this.router.navigate(['/home']);
     },
       error => {
         this.messageError();
+        userLogged = 'login_invalid';
       }
     );
+    return userLogged;
   }
 
   messageError(): void {

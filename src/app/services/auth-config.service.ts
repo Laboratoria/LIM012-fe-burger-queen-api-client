@@ -23,18 +23,18 @@ export class AuthConfigService {
     return sessionStorage.setItem('token', token);
   }
 
-  getUser(): any {  // no se usa ahora
-    return this.http.get(`${this.url}auth`); // read
-  }
+  // getUser(): any {  // no se usa ahora
+  //   return this.http.get(`${this.url}auth`); // read
+  // }
 
-  getToken(): string { // no se usa ahora
-    return sessionStorage.get('token');
-  }
+  // getToken(): string { // no se usa ahora
+  //   return sessionStorage.get('token');
+  // }
 
-  getUserLogged(): any { // no se usa ahora
-    const token = this.getToken();
-    // Aquí iría el endpoint para devolver el usuario para un token
-  }
+  // getUserLogged(): any { // no se usa ahora
+  //   const token = this.getToken();
+  //   // Aquí iría el endpoint para devolver el usuario para un token
+  // }
 
   logout(): void { // usandose
     sessionStorage.removeItem('currentUser');
