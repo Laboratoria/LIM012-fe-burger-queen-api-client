@@ -74,9 +74,4 @@ export class CounterProductsService {
     }
     this.cart.next(listCart); // Enviamos el valor a todos los Observers que estan escuchando nuestro Observable
   }
-
-
-  changeNumber(value): void {
-    this.numberSource.next(value);
-  }
 }
