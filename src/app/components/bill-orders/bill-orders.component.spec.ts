@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ProductsService } from './../../services/products/products.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CounterProductsService } from './../../services/counter-products/counter-products.service';
 import { BillOrdersComponent } from './bill-orders.component';
 
 describe('BillOrdersComponent', () => {
@@ -8,7 +10,9 @@ describe('BillOrdersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BillOrdersComponent ]
+      declarations: [ BillOrdersComponent ],
+      imports: [ HttpClientTestingModule ],
+      providers: [CounterProductsService, ProductsService]
     })
     .compileComponents();
   }));

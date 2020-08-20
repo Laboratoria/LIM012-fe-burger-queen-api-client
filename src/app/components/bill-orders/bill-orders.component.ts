@@ -78,9 +78,17 @@ export class BillOrdersComponent implements OnInit {
   sendOrder(items): void {
     // const obj = {items: this.qty};
 
-    this.order = [{
+    this.order = { // orders obj products array
       client: this.client,
-      products: items.map(prod => prod.quantity),
+      products: items.map(prod => {
+        const obj = {
+          qty: prod.quantity,
+          idprod: prod._id
+        };
+        console.log(obj);
+        return obj;
+      }
+        ),
       // products: obj.items
       // .map(item => {
       //   this.qty = item.quantity,
@@ -89,7 +97,7 @@ export class BillOrdersComponent implements OnInit {
       // map para destructurar el obj
       // status: this.status,
       // dateEntry: this.dateEntry
-    }];
+    };
     console.log(this.order);
     this.productsService.sendOrder(this.order);
   }

@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +8,13 @@ import { Router } from '@angular/router';
 })
 
 export class HomeComponent implements OnInit {
-
   padreNavbar = 'soy un header';
   padreDate = 'Date&HOurs';
   padreBillOrders = 'mensaje desde caja amarilla derecha';
   padreMenuListProducts = 'mensaje caja amarilla izquierda';
 
   constructor(
-    private router: Router
+   // private router: Router
   )
   {}
 
