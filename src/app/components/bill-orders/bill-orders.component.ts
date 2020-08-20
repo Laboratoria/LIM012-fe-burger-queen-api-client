@@ -19,8 +19,10 @@ export class BillOrdersComponent implements OnInit {
   public items: Array<Item>;
   public totalPrice: number;
   public order: any;
-  public status: string = 'pending';
-  public dateEntry: number = Date.now();
+  public productId: string;
+  public qty: number;
+  // public status: string = 'pending';
+  // public dateEntry: number = Date.now();
   // public totalQuantity: number;
 
   constructor(
@@ -32,7 +34,7 @@ export class BillOrdersComponent implements OnInit {
     // this.counterProductService.currentNumber.subscribe(numb => {
     //   this.counter = numb;
     // });
-   }
+  }
 
   ngOnInit(): void {
     this.counterProductService.currentDataCart.subscribe(productInCar => {
@@ -45,17 +47,57 @@ export class BillOrdersComponent implements OnInit {
     });
   }
 
+  // disminuir(item: any): void {
+  //   if (item.quantity === undefined){
+  //             item.quantity = 0;
+  //      } else if (item.quantity !== undefined && item.quantity > 0){
+  //             --item.quantity;
+  //      }
+  //  }
+
+  // ngOnChange(): void {
+  //   this.counterProductService.currentDataCart.subscribe(productInCar => {
+  //     if (productInCar) {
+  //       this.items = productInCar;
+
+  //       // this.totalQuantity = productInCar.length;
+  //       this.totalPrice = productInCar.reduce((sum, current) => sum + (current.price * current.quantity), 0);
+  //     }
+  //   });
+  // }
+
+//   changeQty(product): void {
+//   this.counterProductService.changeCart(product);
+//   console.log(product);
+// }
+
   public remove(product: Item): void {
     this.counterProductService.removeElementCart(product);
   }
 
   sendOrder(items): void {
-    this.order = [{
+    // const obj = {items: this.qty};
+
+    this.order = { // orders obj products array
       client: this.client,
-      products: this.items,
-      status: this.status,
-      dateEntry: this.dateEntry
-    }];
+      products: items.map(prod => {
+        const obj = {
+          qty: prod.quantity,
+          idprod: prod._id
+        };
+        console.log(obj);
+        return obj;
+      }
+        ),
+      // products: obj.items
+      // .map(item => {
+      //   this.qty = item.quantity,
+      //   this.productId = item._id;
+      // }),
+      // map para destructurar el obj
+      // status: this.status,
+      // dateEntry: this.dateEntry
+    };
     console.log(this.order);
     this.productsService.sendOrder(this.order);
   }

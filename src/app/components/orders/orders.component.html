@@ -1,5 +1,13 @@
 <app-navbar [navbarHijo]="navbarPadre"></app-navbar>
-<app-food-orders [foodordersHijo]="foodordersPadre"></app-food-orders>
 
+<section class="box-container-orders">
+    <app-food-orders [foodordersHijo]="foodordersPadre"></app-food-orders>
+
+    <article class="container-pedido">
+        <p >Cliente nombre</p>    
+        <input class="btn-post-order" id="Entregado" type="checkbox">
+        <label class="btn-post-order" for="Entregado">Entregado</label>
+    </article>
+</section>
 
 

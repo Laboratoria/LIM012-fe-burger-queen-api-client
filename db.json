@@ -3,138 +3,113 @@
     [
       {
         "products": [
-          {
-            "_id": "1",
-            "name": "Cafe",
-            "price": 5,
-            "image": "cafe1.jpg",
-            "type": "breakfast",
-            "quantity": 1
-          },
-          {
-            "_id": "2",
-            "name": "Cafe con leche",
-            "price": 7,
-            "image": "cafeconleche.jpg",
-            "type": "breakfast",
-            "quantity": 1
-          },
-          {
-            "_id": "3",
-            "name": "Jugo Natural",
-            "price": 7,
-            "image": "jugonatural.jpg",
-            "type": "breakfast",
-            "quantity": 1
-          },
-          {
-            "_id": "4",
-            "name": "Sandwich Jamon/Queso",
-            "price": 10,
-            "image": "sandwich.png",
-            "type": "breakfast",
-            "quantity": 1
-          },
-          {
-            "_id": "5",
-            "name": "Hamburguesa Simple",
-            "price": 10,
-            "image": "hamsimple.png",
-            "type": "lunch",
-            "quantity": 1
-          },
-          {
-            "_id": "6",
-            "name": "Hamburguesa Doble",
-            "price": 15,
-            "image": "hamdoble.png",
-            "type": "lunch",
-            "quantity": 1
-          }
-        ],
-        "status": "pending",
-        "dateEntry": 1597770987930
-      }
-    ],
-    [
-      {
-        "client": "maria perez",
-        "products": [
-          {
-            "_id": "3",
-            "name": "Jugo Natural",
-            "price": 7,
-            "image": "jugonatural.jpg",
-            "type": "breakfast",
-            "quantity": 1
-          },
-          {
-            "_id": "1",
-            "name": "Cafe",
-            "price": 5,
-            "image": "cafe1.jpg",
-            "type": "breakfast",
-            "quantity": 2
-          },
-          {
-            "_id": "4",
-            "name": "Sandwich Jamon/Queso",
-            "price": 10,
-            "image": "sandwich.png",
-            "type": "breakfast",
-            "quantity": 1
-          }
-        ],
-        "status": "pending",
-        "dateEntry": 1597788152676
-      }
-    ],
-    [
-      {
-        "products": [
-          {
-            "_id": "3",
-            "name": "Jugo Natural",
-            "price": 7,
-            "image": "jugonatural.jpg",
-            "type": "breakfast",
-            "quantity": 2
-          },
-          {
-            "_id": "1",
-            "name": "Cafe",
-            "price": 5,
-            "image": "cafe1.jpg",
-            "type": "breakfast",
-            "quantity": 1
-          },
-          {
-            "_id": "4",
-            "name": "Sandwich Jamon/Queso",
-            "price": 10,
-            "image": "sandwich.png",
-            "type": "breakfast",
-            "quantity": 1
-          },
-          {
-            "_id": "2",
-            "name": "Cafe con leche",
-            "price": 7,
-            "image": "cafeconleche.jpg",
-            "type": "breakfast",
-            "quantity": 1
-          }
-        ],
-        "status": "pending",
-        "dateEntry": 1597788373669
-      }
-    ],
-    [
-      {
-        "products": [
-          {}
+          null,
+          null,
+          null
         ]
       }
-    ]
+    ],
+    [
+      {
+        "client": "Sonia",
+        "products": [
+          2,
+          1,
+          3,
+          2
+        ]
+      }
+    ],
+    [
+      {
+        "products": [
+          2,
+          1,
+          1,
+          2
+        ]
+      }
+    ],
+    [
+      {
+        "products": [
+          2,
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      {
+        "client": "aaaa",
+        "products": [
+          1,
+          5
+        ]
+      }
+    ],
+    [
+      {
+        "products": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    [
+      {
+        "products": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    {
+      "client": "sssss",
+      "products": [
+        {},
+        {},
+        {},
+        {}
+      ],
+      "id": 8
+    },
+    {
+      "client": "aaaaa",
+      "products": [
+        {
+          "qty": 1
+        },
+        {
+          "qty": 3
+        }
+      ],
+      "id": 9
+    },
+    {
+      "products": [
+        {
+          "qty": 1,
+          "idprod": "1"
+        },
+        {
+          "qty": 1,
+          "idprod": "2"
+        },
+        {
+          "qty": 3,
+          "idprod": "3"
+        }
+      ],
+      "id": 10
+    }
   ]
 }

@@ -1,8 +1,8 @@
+import { ProductsService } from './../../services/products/products.service';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MenuListProductsComponent } from './menu-list-products.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MenuListProductsComponent } from './menu-list-products.component';
 import { CounterProductsService } from './../../services/counter-products/counter-products.service';
-import { ProductsService } from '../../services/products/products.service';
 
 describe('MenuListProductsComponent', () => {
   let component: MenuListProductsComponent;
@@ -11,7 +11,7 @@ describe('MenuListProductsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MenuListProductsComponent ],
-      imports: [HttpClientTestingModule],
+      imports: [ HttpClientTestingModule ],
       providers: [CounterProductsService, ProductsService]
     })
     .compileComponents();

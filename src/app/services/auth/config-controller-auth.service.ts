@@ -3,7 +3,6 @@ import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/c
 import { Observable } from 'rxjs';
 import { AuthConfigService } from '../auth-config.service';
 
-
 @Injectable({
   providedIn: 'root'
 })

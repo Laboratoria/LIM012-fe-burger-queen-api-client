@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,26 +15,28 @@ export class AuthConfigService {
     this.url = environment.apiUrl;
   }
 
-  login(user: any): Observable<any> {
-    return this.http.post<any>(`${this.url}auth`, user);
+  login(user: any): Observable<any> { // usandose
+    return this.http.post<any>(`${this.url}auth`, user); // create
   }
 
-  setToken(token: string): void {
+  setToken(token: string): void {  // usandose
     return sessionStorage.setItem('token', token);
   }
 
-  getToken(): string {
+  getUser(): any {  // no se usa ahora
+    return this.http.get(`${this.url}auth`); // read
+  }
+
+  getToken(): string { // no se usa ahora
     return sessionStorage.get('token');
   }
-  getUser() {
-    return this.http.get(`${this.url}auth`);
-  }
-  getUserLogged(): void {
+
+  getUserLogged(): any { // no se usa ahora
     const token = this.getToken();
     // Aquí iría el endpoint para devolver el usuario para un token
   }
 
-  logout(): void {
+  logout(): void { // usandose
     sessionStorage.removeItem('currentUser');
   }
 }

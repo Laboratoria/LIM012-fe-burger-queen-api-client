@@ -8,7 +8,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit {
-
   padreNavbar = 'soy un header';
   padreDate = 'Date&HOurs';
   padreBillOrders = 'mensaje desde caja amarilla derecha';

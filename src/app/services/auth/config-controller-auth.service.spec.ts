@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { ConfigcontrollerAuthService } from '../../services/auth/config-controller-auth.service';
 import { HttpClientTestingModule} from '@angular/common/http/testing';
+import { ConfigcontrollerAuthService } from './config-controller-auth.service';
 
 describe('ConfigControllerAuthService', () => {
   let service: ConfigcontrollerAuthService;
