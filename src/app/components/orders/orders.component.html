@@ -1,5 +1,11 @@
 <app-navbar [navbarHijo]="navbarPadre"></app-navbar>
 
+
+<article class="articleButton">
+    <button class= "options-button" routerLink="/home" routerLinkActive="active">Desayuno</button> 
+    <button class= "options-button" routerLink="/home" routerLinkActive="active">Almuerzo</button>
+    <button class= "options-button" routerLink="/orders" routerLinkActive="active">Pedidos</button>
+  </article>
 <section class="box-container-orders">
     <app-food-orders [foodordersHijo]="foodordersPadre"></app-food-orders>
 
