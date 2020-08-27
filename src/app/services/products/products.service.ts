@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, pipe } from 'rxjs';
 
 
 @Injectable({
@@ -38,6 +38,11 @@ export class ProductsService {
 
   getListProduct(): Observable<any> {
     return this.http.get<any>(`${this.url}products`);
+  }
+
+  kitchenOrders(): Observable<any> {
+    return this.http.get('http://localhost:3000/orders');
+
   }
 }
 

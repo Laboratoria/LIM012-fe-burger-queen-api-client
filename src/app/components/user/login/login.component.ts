@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthConfigService } from '../../../services/auth-config.service';
 import { Router } from '@angular/router';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { MenuListProductsComponent } from '../../menu-list-products/menu-list-products.component';
+import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'app-login',
@@ -17,10 +19,12 @@ export class LoginComponent implements OnInit {
     password: string
   };
   public isError = false;
+  public menuListProductsComponent: MenuListProductsComponent;
 
   constructor(
     private authConfigService: AuthConfigService,
-    private router: Router
+    private router: Router,
+    private productsService: ProductsService,
   ) { }
 
   ngOnInit(): void {
@@ -40,6 +44,7 @@ export class LoginComponent implements OnInit {
         this.authConfigService.setToken(data.token);
         userLogged = 'login_valid';
         this.router.navigate(['/home']);
+        // this.menuListProductsComponent.getProducts('breakfast');
     },
       error => {
         this.messageError();

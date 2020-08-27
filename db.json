@@ -1,3 +1,40 @@
 {
-  "orders": []
+  "orders": [
+    {
+      "client": "carmen",
+      "products": [
+        {
+          "qty": 3,
+          "idprod": "2",
+          "name": "Cafe con leche",
+          "price": 7
+        },
+        {
+          "qty": 1,
+          "idprod": "3",
+          "name": "Jugo Natural",
+          "price": 7
+        }
+      ],
+      "id": 1
+    },
+    {
+      "client": "Sonia",
+      "products": [
+        {
+          "qty": 2,
+          "idprod": "4",
+          "name": "Sandwich Jamon/Queso",
+          "price": 10
+        },
+        {
+          "qty": 1,
+          "idprod": "6",
+          "name": "Hamburguesa Doble",
+          "price": 15
+        }
+      ],
+      "id": 2
+    }
+  ]
 }

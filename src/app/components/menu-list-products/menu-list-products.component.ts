@@ -27,6 +27,7 @@ export class MenuListProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getProducts('breakfast');
   }
 
   getProducts(typeSelect): void {

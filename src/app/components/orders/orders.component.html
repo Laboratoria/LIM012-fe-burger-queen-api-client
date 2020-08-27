@@ -13,6 +13,13 @@
         <p >Cliente nombre</p>    
         <input class="btn-post-order" id="Entregado" type="checkbox">
         <label class="btn-post-order" for="Entregado">Entregado</label>
+
+        <div class="paintOrders" *ngFor= "let order of showOrders">
+            <p class="showOrder">{{ showOrders[0].client }}</p>
+            <p class="showOrder">{{ showOrders[0].products[0].name }} - S/.{{ showOrders[0].products[0].price }} - cant: {{ showOrders[0].products[0].qty }}</p>
+            
+        </div>
+
     </article>
 </section>
 

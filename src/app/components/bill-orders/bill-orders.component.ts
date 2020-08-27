@@ -3,8 +3,7 @@ import { ProductsService } from './../../services/products/products.service';
 import { Component, OnInit, Input, ɵConsole } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Item } from '../../interfaces/item';
-
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bill-orders',
@@ -24,10 +23,12 @@ export class BillOrdersComponent implements OnInit {
   // public status: string = 'pending';
   // public dateEntry: number = Date.now();
   // public totalQuantity: number;
+  public subscription: any;
 
   constructor(
     private counterProductService: CounterProductsService,
-    private productsService: ProductsService
+    private productsService: ProductsService,
+    private router: Router
     ) {
     // this.counterProductService.currentDataCart.subscribe(item => this.counter = item);
 
@@ -37,7 +38,7 @@ export class BillOrdersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.counterProductService.currentDataCart.subscribe(productInCar => {
+    this.subscription = this.counterProductService.currentDataCart.subscribe(productInCar => {
       if (productInCar) {
         this.items = productInCar;
 
@@ -75,7 +76,7 @@ export class BillOrdersComponent implements OnInit {
     this.counterProductService.removeElementCart(product);
   }
 
-  sendOrder(items): void {
+  sendOrder(items): any {
     // const obj = {items: this.qty};
 
     this.order = { // orders obj products array
@@ -83,7 +84,9 @@ export class BillOrdersComponent implements OnInit {
       products: items.map(prod => {
         const obj = {
           qty: prod.quantity,
-          idprod: prod._id
+          idprod: prod._id,
+          name: prod.name,
+          price: prod.price
         };
         console.log(obj);
         return obj;
@@ -100,5 +103,15 @@ export class BillOrdersComponent implements OnInit {
     };
     console.log(this.order);
     this.productsService.sendOrder(this.order);
+    // this.productsService.sendOrder(items);
+    this.router.navigate(['/orders']);
+    this.subscription.unsubscribe();
+
+    // setTimeout(() => {
+    //   this.subscription.unsubscribe();
+    // }, 10000);
+
   }
+
+  // ngOnDestroy() { this.subscription(`onDestroy`); }
 }
