@@ -1,76 +1,40 @@
 {
   "orders": [
     {
-      "client": "carmen",
+      "client": "juana",
       "products": [
         {
-          "qty": 3,
-          "idprod": "2",
-          "name": "Cafe con leche",
-          "price": 7
-        },
-        {
           "qty": 1,
-          "idprod": "3",
-          "name": "Jugo Natural",
-          "price": 7
+          "idprod": "1",
+          "name": "Cafe",
+          "price": 5
         }
       ],
       "id": 1
     },
     {
-      "client": "Sonia",
+      "client": "pedro",
       "products": [
         {
-          "qty": 2,
+          "qty": 1,
           "idprod": "4",
           "name": "Sandwich Jamon/Queso",
           "price": 10
-        },
-        {
-          "qty": 1,
-          "idprod": "6",
-          "name": "Hamburguesa Doble",
-          "price": 15
         }
       ],
       "id": 2
     },
     {
-      "client": "vicky",
+      "client": "ABRIL",
       "products": [
         {
-          "qty": 3,
-          "idprod": "1",
-          "name": "Cafe",
-          "price": 5
-        },
-        {
           "qty": 1,
-          "idprod": "2",
-          "name": "Cafe con leche",
-          "price": 7
+          "idprod": "5",
+          "name": "Hamburguesa Simple",
+          "price": 10
         }
       ],
       "id": 3
-    },
-    {
-      "client": "Seuc",
-      "products": [
-        {
-          "qty": 2,
-          "idprod": "1",
-          "name": "Cafe",
-          "price": 5
-        },
-        {
-          "qty": 1,
-          "idprod": "2",
-          "name": "Cafe con leche",
-          "price": 7
-        }
-      ],
-      "id": 4
     }
   ]
 }

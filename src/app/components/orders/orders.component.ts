@@ -18,24 +18,23 @@ export class OrdersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.productsService.kitchenOrders().subscribe(data => {
-      console.log(data);
-      this.showOrders = {
+    this.productsService.kitchenOrders().subscribe(
+      data => {
+  this.order = data;
+  console.log(this.order);
+      /*this.showOrders = {
         order: data.forEach(element => {
           console.log(element);
           const obj = {
             client: element.client,
             id: element.id,
             prod: element.products
-            // price: element.products.price,
-            // qty: element.products.qty,
           };
-          console.log(obj.prod);
+          console.log(obj.client);
+          console.log(obj.prod[0].name);
           return obj;
         }),
-      };
-      console.log(this.showOrders);
-
+      };*/
     });
   }
 }
