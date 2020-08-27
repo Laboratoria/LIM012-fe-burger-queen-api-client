@@ -1,4 +1,16 @@
+import { Item } from './item';
+
 export interface Order {
-    client: string;
-    products: string;
+    '_id': string;
+    'userId': string;
+    'client': string;
+    'products': [
+      {
+        'qty': number;
+        'product': Item;
+      }
+    ];
+    'status': string;
+    'dateEntry': Date;
 }
+

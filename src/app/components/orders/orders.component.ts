@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { CounterProductsService } from './../../services/counter-products/counter-products.service';
+import { CounterProductsService } from './../../services/counter-products/counter-products.service';
 import { ProductsService } from './../../services/products/products.service';
+import { Order } from '../../interfaces/order';
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
@@ -10,18 +11,20 @@ export class OrdersComponent implements OnInit {
   navbarPadre = 'mensaje desde el padre';
   foodordersPadre = 'mensaje desde el padre';
   public showOrders: any;
-  public order: any;
+  public orders: Order[];
+  // public product: any;
 
   constructor(
-    // private counterProductService: CounterProductsService,
+    private counterProductService: CounterProductsService,
     private productsService: ProductsService,
   ) { }
 
   ngOnInit(): void {
     this.productsService.kitchenOrders().subscribe(
-      data => {
-  this.order = data;
-  console.log(this.order);
+      (data: Order[]) => {
+      this.orders = data;
+      console.log(this.orders);
+
       /*this.showOrders = {
         order: data.forEach(element => {
           console.log(element);
@@ -37,4 +40,5 @@ export class OrdersComponent implements OnInit {
       };*/
     });
   }
+ 
 }

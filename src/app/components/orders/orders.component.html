@@ -2,39 +2,25 @@
 
 
 <article class="articleButton">
-    <button class= "options-button" routerLink="/home" routerLinkActive="active">Desayuno</button>
-    <button class= "options-button" routerLink="/home" routerLinkActive="active">Almuerzo</button>
-    <button class= "options-button" routerLink="/orders" routerLinkActive="active">Pedidos</button>
-  </article>
+    <button class="options-button" routerLink="/home" routerLinkActive="active">Desayuno</button>
+    <button class="options-button" routerLink="/home" routerLinkActive="active">Almuerzo</button>
+    <button class="options-button" routerLink="/orders" routerLinkActive="active">Pedidos</button>
+</article>
 <section class="box-container-orders">
     <app-food-orders [foodordersHijo]="foodordersPadre"></app-food-orders>
 
     <article class="container-pedido">
-        <p >PEDIDOS DE COCINA</p>
+        <p>PEDIDOS DE COCINA</p>
         <input class="btn-post-order" id="Entregado" type="checkbox">
         <label class="btn-post-order" for="Entregado">EN PROGRESO</label>
 
-        <div class="paintOrders">
-            <!-- <p class="showOrder">{{ showOrders[0].client }}</p>
-            <p class="showOrder">{{ showOrders[0].products[0].name }}
-                - S/.{{ showOrders[0].products[0].price }}
-                - cant: {{ showOrders[0].products[0].qty }}</p> -->
-            <p>Pedido 1</p>
-            <p>{{order[0].client }}</p>
-            <p>{{order[0].products[0].name}}</p>
-
-            <p>Pedido 2</p>
-            <p>{{order[1].client }}</p>
-            <p>{{order[1].products[0].name}}</p>
-
-            <p>Pedido 3</p>
-            <p>{{order[2].client }}</p>
-            <p>{{order[2].products[0].name}}</p>
-            
- 
-        </div>
+        <div class="paintOrders" *ngFor="let order of orders">
+            <p>{{order.client}}</p>
+            <div *ngFor="let product of order.products">
+            <td>{{product.name}}</td>
+            <td>{{product.qty}}</td>
+            </div> 
+        </div> 
 
     </article>
 </section>
-
-
