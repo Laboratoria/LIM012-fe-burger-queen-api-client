@@ -2,7 +2,7 @@
 
 
 <article class="articleButton">
-    <button class= "options-button" routerLink="/home" routerLinkActive="active">Desayuno</button> 
+    <button class= "options-button" routerLink="/home" routerLinkActive="active">Desayuno</button>
     <button class= "options-button" routerLink="/home" routerLinkActive="active">Almuerzo</button>
     <button class= "options-button" routerLink="/orders" routerLinkActive="active">Pedidos</button>
   </article>
@@ -10,14 +10,17 @@
     <app-food-orders [foodordersHijo]="foodordersPadre"></app-food-orders>
 
     <article class="container-pedido">
-        <p >Cliente nombre</p>    
+        <p >Cliente nombre</p>
         <input class="btn-post-order" id="Entregado" type="checkbox">
         <label class="btn-post-order" for="Entregado">Entregado</label>
 
-        <div class="paintOrders" *ngFor= "let order of showOrders">
-            <p class="showOrder">{{ showOrders[0].client }}</p>
-            <p class="showOrder">{{ showOrders[0].products[0].name }} - S/.{{ showOrders[0].products[0].price }} - cant: {{ showOrders[0].products[0].qty }}</p>
-            
+        <div class="paintOrders">
+            <!-- <p class="showOrder">{{ showOrders[0].client }}</p>
+            <p class="showOrder">{{ showOrders[0].products[0].name }}
+                - S/.{{ showOrders[0].products[0].price }}
+                - cant: {{ showOrders[0].products[0].qty }}</p> -->
+            <p>{{ showOrders }}</p>
+
         </div>
 
     </article>

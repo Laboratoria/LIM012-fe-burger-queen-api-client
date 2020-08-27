@@ -35,6 +35,42 @@
         }
       ],
       "id": 2
+    },
+    {
+      "client": "vicky",
+      "products": [
+        {
+          "qty": 3,
+          "idprod": "1",
+          "name": "Cafe",
+          "price": 5
+        },
+        {
+          "qty": 1,
+          "idprod": "2",
+          "name": "Cafe con leche",
+          "price": 7
+        }
+      ],
+      "id": 3
+    },
+    {
+      "client": "Seuc",
+      "products": [
+        {
+          "qty": 2,
+          "idprod": "1",
+          "name": "Cafe",
+          "price": 5
+        },
+        {
+          "qty": 1,
+          "idprod": "2",
+          "name": "Cafe con leche",
+          "price": 7
+        }
+      ],
+      "id": 4
     }
   ]
 }
