@@ -1,0 +1,13 @@
+<section>
+
+  <app-navbar [hijoNavbar]="padreNavbar"></app-navbar>
+  <app-date [hijoDate]="padreDate"></app-date>
+
+  <div class="breakfast-section-container">
+    <app-menu-list-products [hijoMenuListProducts]="padreMenuListProducts"></app-menu-list-products>
+    <app-bill-orders [hijoBillOrders]="padreBillOrders"></app-bill-orders>
+    <router-outlet></router-outlet>
+  </div>
+
+</section>
+

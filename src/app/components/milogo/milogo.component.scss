@@ -1,0 +1,23 @@
+@mixin container($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+  
+.logo {
+    @include container(362px, 130px);
+    display: flex;
+    margin-top: 0;
+    padding: 2% 0 3% 2%;
+}
+  
+$layout-breakpoint-tablet: 400px;
+// todo lo que cambie aqui modifica la vista tablet
+@media (min-width: $layout-breakpoint-tablet) {
+  .logo {
+    @include container(462px, 200px);
+    display: flex;
+    margin-left: 1%;
+    margin-top: 0;
+    padding: 2% 0 2% 2%;
+  }
+}

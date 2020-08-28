@@ -1,0 +1,43 @@
+$blue: #071685;
+$blueTranspa: rgba(7, 22, 133, 0.5);
+$yellow: #F7B610;
+$whiteTranspa: rgba(255, 255, 255, 1);
+$red:  #E30D2C;
+$yellowTranspa: rgba(247, 182, 16, 0.5);
+$gris: #494747;
+
+.container-listado{    
+    width: 49vw;
+    height: 65vh;
+    margin-top: 15%;
+    margin-left: 1%;
+    margin-right: 0.5%;
+    background: $blueTranspa;
+    box-sizing: border-box;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.letraListado{
+width: 172px;
+height: 48px;
+left: 166px;
+top: 300%;
+font-family: Bangers;
+font-style: normal;
+font-weight: normal;
+font-size: 60px;
+line-height: 64px;
+color: #F7B610;
+}
+
+.btn-post-order{
+    background-color: $yellow;
+    color: $blue;
+    text-align: center;
+}
+
+.total-bill{
+    color: $red;
+    border: 2pt solid $red;
+}
+

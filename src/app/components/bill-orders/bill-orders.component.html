@@ -1,0 +1,46 @@
+<article class="yellow-section-right">
+  <div class="client-name-container">
+    <input class="client-info-select" placeholder="Client Name" [(ngModel)]="client">
+    <span>{{ client }}</span>
+  </div>
+
+    <div class="product-resume-total">
+      <!-- <p>
+        {{ counter }}
+      </p> -->
+      
+        <table class="table-products">
+          <tr>
+            <th> PRODUCTOS </th>
+            <th> CANTIDAD </th>
+            <th> PRECIOS </th>
+
+          </tr>
+          <tr *ngFor= "let item of items">
+            <!-- <div *ngIf="typeProduct===product.type">
+              <div (click)= "sendOrder(product)"> -->
+                <td class="product-name">{{item.name}}</td>
+                <td><input class="input-product-name" type="number" [(ngModel)]=item.quantity>
+                   <!-- {{ item.quantity }} -->
+                  <!-- <button (click)="disminuir(item)" > - </button> -->
+                  </td>
+                <td class="product-price"> S/{{item.price}}</td>
+                <td>
+                  <button type="button" (click)="remove(item)"> 
+                    <span class="iconify delete" data-inline="false" data-icon="ic:baseline-delete"></span>
+                  </button>
+                </td>
+               
+                <!-- </div>
+      </div> -->
+      </tr>
+        </table>
+      
+      <!-- <p>cantidad total de cada tipo de producto: {{totalQuantity}}</p> -->
+    </div>
+    <p class="total-amount">Precio total: S/.{{totalPrice}}</p>
+
+    <button class="cancel-order">CANCELAR</button>
+    <button class="send-order"type="button" (click)="sendOrder(items)">ENVIAR A COCINA</button>
+
+  </article>

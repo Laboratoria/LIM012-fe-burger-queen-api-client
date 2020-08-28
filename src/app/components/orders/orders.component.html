@@ -1,0 +1,26 @@
+<app-navbar [navbarHijo]="navbarPadre"></app-navbar>
+
+
+<article class="articleButton">
+    <button class="options-button" routerLink="/home" routerLinkActive="active">Desayuno</button>
+    <button class="options-button" routerLink="/home" routerLinkActive="active">Almuerzo</button>
+    <button class="options-button" routerLink="/orders" routerLinkActive="active">Pedidos</button>
+</article>
+<section class="box-container-orders">
+    <app-food-orders [foodordersHijo]="foodordersPadre"></app-food-orders>
+
+    <article class="container-pedido">
+        <p>PEDIDOS DE COCINA</p>
+        <input class="btn-post-order" id="Entregado" type="checkbox">
+        <label class="btn-post-order" for="Entregado">EN PROGRESO</label>
+
+        <div class="paintOrders" *ngFor="let order of orders">
+            <p>{{order.client}}</p>
+            <div *ngFor="let product of order.products">
+            <td>{{product.name}}</td>
+            <td>{{product.qty}}</td>
+            </div> 
+        </div> 
+
+    </article>
+</section>

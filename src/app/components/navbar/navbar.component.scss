@@ -1,0 +1,40 @@
+$blue: #071685;
+$blueTranspa: rgba(7, 22, 133, 0.5);
+$red:  #E30D2C;
+$whiteTranspa: RGBA(255, 255, 255, 1);
+$yellow : #F7B610;
+
+header {
+  background: $blue;
+  background: $blueTranspa;
+  display: flex;
+  flex-direction: row;
+  // justify-content: flex-end;
+}
+
+.logout {
+    // display: flex;
+    // margin-left: 510%;
+    // margin-top: 50%;
+    // width: 80px;
+    // height: 62px;
+    font-size: 30px;
+    color: $yellow;
+    background-color: rgba(7, 22, 133, 0);
+}
+
+.user-name {
+    // display: flex;
+    // margin-left: 300%;
+    // margin-top: 100%;
+    font-size: 18px;
+}
+
+.user-logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // align-content: center;
+  margin-left: 35%;
+}

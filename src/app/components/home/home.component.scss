@@ -1,0 +1,21 @@
+$blue: #071685;
+$blueTranspa: rgba(7, 22, 133, 0.5);
+$yellow: #F7B610;
+$yellowTranspa: rgba(247, 182, 16, 0.5);
+$red:  #E30D2C;
+$redTranspa: rgba(227, 13, 44, 0.5);
+$gray: #E3DED5;
+$grayTranspa: rgba(227, 222, 213, 0.5);
+
+.breakfast-section-container {
+  display: flex;
+  flex-direction: row;
+}
+
+$layout-breakpoint-tablet: 400px;
+// aqui todo lo modificado afecta la vista tablet
+@media (min-width: $layout-breakpoint-tablet) {
+  
+
+}
+

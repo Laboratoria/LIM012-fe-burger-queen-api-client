@@ -1,0 +1,90 @@
+$blue: #071685;
+$blueTranspa: rgba(7, 22, 133, 0.5);
+$yellow: #F7B610;
+$yellowTranspa: rgba(247, 182, 16, 0.5);
+$red:  #E30D2C;
+$redTranspa: rgba(227, 13, 44, 0.5);
+$gray: #E3DED5;
+$grayTranspa: rgba(227, 222, 213, 0.5);
+$negro: #1A1919;
+$verde: #00C200;
+
+@mixin button($ancho, $alto) {
+  width: $ancho;
+  height: $alto;
+}
+    
+.options-button {
+  @include button(157px, 45px);
+}
+
+.options-button {
+  background: $yellow;
+  background: $yellowTranspa;
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: none;
+  font-size: large;
+}
+
+.articleButton {
+  flex-direction: row;
+}
+
+.yellow-section-left {
+  width: 49vw;
+  height: 65vh;
+  margin-left: 1%;
+  margin-right: 0.5%;
+  background: $yellowTranspa;
+  box-sizing: border-box;
+  border-radius: 30px 0px 0px 30px;
+}
+    
+.menu{
+  display: flex;
+  width: 107px;
+  height: 54px;
+  left: 55%;
+  top: 214%;
+  margin-left: 40%;
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 300%;
+  color: $red;      
+}
+
+$layout-breakpoint-tablet: 400px;
+// aqui todo lo modificado afecta la vista tablet
+@media (min-width: $layout-breakpoint-tablet) {
+
+.options-button {
+  margin-left: 4%;
+  margin-top: 4%;
+  font-size: xx-large;
+}
+
+.articleButton {
+  display: flex;
+  flex-direction: row;
+}
+.table-products{
+  table-layout: fixed;
+  width: 85%;
+  padding-left: 15%;
+}
+.product-price{
+  text-align: center;
+}
+.product-name{
+  font-size: x-large;
+}
+.add-product{
+  font-size: 30px; 
+  color:$verde;
+}
+.button-add-product{
+  background: none;
+}
+}
+

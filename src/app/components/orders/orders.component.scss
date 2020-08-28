@@ -1,0 +1,28 @@
+$blue: #071685;
+$yellow: #F7B610;
+$red:  #E30D2C;
+$blueTranspa: rgba(7, 22, 133, 0.5);
+$whiteTranspa: RGBA(255, 255, 255, 1);
+$gris: #494747;
+
+.box-container-orders {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-pedido{
+  margin-top: 7.2%;
+  margin-left: 1%;
+  width: 49vw;
+  height: 65vh;
+  background: $blueTranspa;  
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.btn-post-order{
+  background-color: $yellow;
+  color: $blue;
+  text-align: center;
+}
+

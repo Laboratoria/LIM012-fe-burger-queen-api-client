@@ -1,0 +1,96 @@
+$blue: #071685;
+$blueTranspa: rgba(7, 22, 133, 0.5);
+$yellow: #F7B610;
+$yellowTranspa: rgba(247, 182, 16, 0.5);
+$red:  #E30D2C;
+$redTranspa: rgba(227, 13, 44, 0.5);
+$gray: #E3DED5;
+$grayTranspa: rgba(227, 222, 213, 0.5);
+$negro: #1A1919;
+
+.yellow-section-right {
+  margin-top: 11%;
+  margin-left: 2%;
+  width: 49vw;
+  height: 65vh;
+  background: $yellowTranspa;  
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.client-name-container {
+  width: 43vw;
+  height: 10%;
+  margin-left: 5%;
+  background: $grayTranspa;
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.client-info-select {
+padding: 2%;
+}
+
+.table-products{
+  table-layout: fixed;
+  width: 85%;
+  padding-left: 15%;
+}
+
+.input-product-name{
+  width: 30%;
+}
+
+.product-resume-total {  
+  width: 43vw;
+  height: 65%;
+  margin-left: 5%;
+  margin-top: 5%;
+
+  background: $grayTranspa;
+  box-sizing: border-box;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.total-amount {
+  // bottom:20%;
+  width: 35%;
+  height: 7%;
+  // margin-top: 75%;
+  margin-top: -10%;
+  margin-bottom: 5%;
+  margin-left: 30%;
+  background: $redTranspa;
+  // position: absolute;
+  border-radius: 0px 30px 30px 0px;
+  display: flex;
+  align-content: center;
+}
+
+.cancel-order {
+  width: 153px;
+  height: 64px;
+  margin-left: 15%;
+  margin-top: 2%;
+  background: $red;
+  border: 1px solid $red;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+.send-order {
+  width: 222px;
+  height: 64px;
+  margin-left: 15%;
+  margin-top: 2%;
+  background: $yellow;
+  border: 20px solid $yellow;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.delete{
+  font-size: 30px; 
+  color:$negro;
+}
