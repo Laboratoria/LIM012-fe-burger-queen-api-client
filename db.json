@@ -107,6 +107,24 @@
         }
       ],
       "id": 6
+    },
+    {
+      "client": "juana de arco",
+      "products": [
+        {
+          "qty": 1,
+          "idprod": "1",
+          "name": "Cafe",
+          "price": 5
+        },
+        {
+          "qty": 1,
+          "idprod": "2",
+          "name": "Cafe con leche",
+          "price": 7
+        }
+      ],
+      "id": 7
     }
   ]
 }
